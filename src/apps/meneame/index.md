@@ -1,9 +1,11 @@
 ---
 title: Menéame
-date: '2019-07-27T22:12:03.284Z'
+date: '2015-05-13T22:12:03.284Z'
 path: '/app-meneame/'
 category: 'app'
-icon: 'meneame-icon.png'
+icon: 'meneame-icon'
 ---
 
-The fist dedicated Software to rent Stand up Paddles and Manage renting spots. After a long research and the lack of suitable solutions we decided to make our own software to run and manage our Stand up paddle renting stations here in Zürich. We created a simple and easy to use iPad app to make sales as easy as possible. With our Build in Crashcourse option you are able to control if you want a fully automatic station or introduce every customer by giving a Crashcourse.
+[Menéame Noticias](https://apsl.github.io/react-native-meneame/) was the first mobile app I built fully on React Native. It was built first for iOS and later on Android by my Mobile Team at APSL when the framework supported it. We were lucky to count with help from [Ricardo Galli](https://mobile.twitter.com/gallir), who was one of our Principal Engineers at APSL at that time.
+
+This app is fully open source and you can browse the source code [here](https://github.com/APSL/react-native-meneame). You can download the app for [iOS](https://itunes.apple.com/es/app/meneame-noticias/id1005081426) and [Android](https://play.google.com/store/apps/details?id=com.apsl.mnm).

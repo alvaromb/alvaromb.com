@@ -1,9 +1,13 @@
 ---
 title: Envío Dinero
-date: '2019-07-27T22:12:03.284Z'
+date: '2017-07-27T22:12:03.284Z'
 path: '/app-enviodinero/'
 category: 'app'
-icon: 'enviodinero-icon.png'
+icon: 'enviodinero-icon'
 ---
 
-The fist dedicated Software to rent Stand up Paddles and Manage renting spots. After a long research and the lack of suitable solutions we decided to make our own software to run and manage our Stand up paddle renting stations here in Zürich. We created a simple and easy to use iPad app to make sales as easy as possible. With our Build in Crashcourse option you are able to control if you want a fully automatic station or introduce every customer by giving a Crashcourse.
+Envío Dinero is the mobile app we built for the canadian company [EnvíoDinero.com](https://www.enviodinero.ca/enviodinero), which makes possible to send money funds to Cuba through their service.
+
+The app is entirely build on React Native, targeting both iOS and Android with the same codebase. The app also implements secure payments using 3DSecure system.
+
+Currently, the app is only available on north american markets, for both [iOS](https://itunes.apple.com/us/app/envio-dinero/id1078897134?ls=1&mt=8) and [Android](https://play.google.com/store/apps/details?id=com.enviodinero).

@@ -17,7 +17,7 @@ const typography = new Typography({
   ...Wordpress2016,
   headerFontFamily: ['Montserrat', 'sans-serif'],
   bodyFontFamily: ['Libre Franklin', 'serif'],
-  // baseFontSize: '20px',
+  baseFontSize: '22px',
   headerWeight: 700,
 })
 

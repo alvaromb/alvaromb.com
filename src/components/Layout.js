@@ -4,8 +4,7 @@ import CenteredH1 from './CenteredH1'
 import CenteredBottomSubtitle from './CenteredBottomSubtitle'
 import { rhythm, scale } from '../utils/typography'
 
-import bgLine from '../assets/bgline.png'
-import backgroundImage from '../assets/Background.png'
+import backgroundImage from '../assets/Background.jpg'
 
 class Layout extends React.Component {
   render() {
@@ -47,32 +46,23 @@ class Layout extends React.Component {
     return (
       <div
         style={{
-          backgroundImage: `url(${bgLine})`,
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center top',
-          backgroundRepeat: 'repeat-x',
           overflow: 'hidden',
         }}
       >
         <div
           style={{
-            backgroundImage: `url(${backgroundImage})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center top',
-            overflow: 'hidden',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            maxWidth: 588,
+            padding: `0 ${rhythm(3 / 4)}`,
+            paddingBottom: 80,
           }}
         >
-          <div
-            style={{
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              maxWidth: 588,
-              padding: `0 ${rhythm(3 / 4)}`,
-              paddingBottom: 80,
-            }}
-          >
-            {header}
-            {children}
-          </div>
+          {header}
+          {children}
         </div>
       </div>
     )

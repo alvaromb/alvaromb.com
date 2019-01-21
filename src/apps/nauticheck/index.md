@@ -1,9 +1,11 @@
 ---
 title: Nauticheck
-date: '2019-07-27T22:12:03.284Z'
+date: '2016-05-03T22:12:03.284Z'
 path: '/app-nauticheck/'
 category: 'app'
-icon: 'nauticheck-icon.png'
+icon: 'nauticheck-icon'
 ---
 
-Con Nauticheck cuidas y gestionas tu barco. Sin sorpresas, ahorrando tiempo y dinero. Tendrás siempre a mano la información de tu barco, la gestión de su documentación, alarmas de mantenimiento, presupuestos de reparación, check-in portuario sin papeles, desde cualquier lugar y para todas las esloras.
+Nauticheck is the mobile app for the boat management system [Nauticadvisor](https://www.nauticadvisor.com/en/nauticheck/). It was the first full app built for iOS and Android from scratch, sharing the same codebase and similar design clues.
+
+Later on, the Mobile Team at APSL has succeeded updating the app and supporting the latest React Native versions. You can download the app for [iOS](https://itunes.apple.com/us/app/nauticheck/id1046893573) and [Android](https://play.google.com/store/apps/details?id=com.nauticadvisor.nauticheck).

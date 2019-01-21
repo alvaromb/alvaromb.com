@@ -1,9 +1,13 @@
 ---
 title: Entropy Dispatcher
-date: '2019-07-27T22:12:03.284Z'
+date: '2018-06-15T09:12:03.284Z'
 path: '/app-entropy/'
 category: 'app'
-icon: 'entropy-icon.png'
+icon: 'entropy-icon'
 ---
 
-The fist dedicated Software to rent Stand up Paddles and Manage renting spots. After a long research and the lack of suitable solutions we decided to make our own software to run and manage our Stand up paddle renting stations here in Zürich. We created a simple and easy to use iPad app to make sales as easy as possible. With our Build in Crashcourse option you are able to control if you want a fully automatic station or introduce every customer by giving a Crashcourse.
+Entropy Dispatcher is a part of [WDNA](https://wdna.com/solutions)'s solutions for network management. It is intented to provide assistance and work orders to field operators working for mobile networking companies that install and manage mobile networks.
+
+The app is entirely build on React Native, implementing a custom JSON-based form rendering and dynamic workflow that enables field operators to manage their job orders efficiently. We built for iOS and Android using the same React Native codebase.
+
+The app is a part of WDNA's private tools and it's not available for download.
