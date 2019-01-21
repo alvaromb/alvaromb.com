@@ -7,6 +7,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import H3 from '../components/H3'
 import AppList from '../components/AppList'
+import OpenSource from '../components/OpenSource'
 import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
@@ -28,18 +29,18 @@ class BlogIndex extends React.Component {
         />
         <Bio />
         <AppList apps={apps} />
-        <H3>Open Source</H3>
+        <OpenSource />
         <H3>Blog</H3>
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <div key={node.fields.slug}>
+              <small>{node.frontmatter.date}</small>
               <H3>
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </H3>
-              <small>{node.frontmatter.date}</small>
             </div>
           )
         })}
