@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
+import CenteredH1 from './CenteredH1'
+import CenteredBottomSubtitle from './CenteredBottomSubtitle'
 import { rhythm, scale } from '../utils/typography'
+
+import backgroundImage from '../assets/Background.png'
 
 class Layout extends React.Component {
   render() {
@@ -11,25 +14,12 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-            fontFamily: 'Libre Franklin, sans-serif',
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {title}
-          </Link>
-        </h1>
+        <div style={{ marginTop: 404 }}>
+          <CenteredH1>{title}</CenteredH1>
+          <CenteredBottomSubtitle>
+            MOBILE APPS, DESIGN, UX & DEVELOPMENT
+          </CenteredBottomSubtitle>
+        </div>
       )
     } else {
       header = (
@@ -55,14 +45,23 @@ class Layout extends React.Component {
     return (
       <div
         style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center top',
+          overflow: 'hidden',
         }}
       >
-        {header}
-        {children}
+        <div
+          style={{
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            maxWidth: 588,
+            padding: `0 ${rhythm(3 / 4)}`,
+          }}
+        >
+          {header}
+          {children}
+        </div>
       </div>
     )
   }

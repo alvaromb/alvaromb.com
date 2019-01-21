@@ -2,6 +2,7 @@
 title: New blog and new site
 date: '2017-03-31T00:02:32.169Z'
 path: '/new-blog-new-site/'
+category: 'blog'
 ---
 
 To be honest, I've never been an active blogger. However, I really enjoy

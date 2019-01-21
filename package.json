@@ -29,8 +29,8 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
-    "typeface-cormorant-garamond": "^0.0.54",
     "typeface-libre-franklin": "^0.0.54",
+    "typeface-montserrat": "^0.0.54",
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },

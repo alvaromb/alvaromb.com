@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
+import H3 from '../components/H3'
+import AppList from '../components/AppList'
 import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
@@ -14,7 +16,8 @@ class BlogIndex extends React.Component {
       this,
       'props.data.site.siteMetadata.description'
     )
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const posts = get(this, 'props.data.posts.edges')
+    const apps = get(this, 'props.data.apps.edges')
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -24,24 +27,19 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <Bio />
+        <AppList apps={apps} />
+        <H3>Open Source</H3>
+        <H3>Blog</H3>
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  fontFamily: 'Cormorant Garamond, serif',
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+              <H3>
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
-              </h3>
-              <small style={{ fontFamily: 'Libre Franklin, sans-serif' }}>
-                {node.frontmatter.date}
-              </small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </H3>
+              <small>{node.frontmatter.date}</small>
             </div>
           )
         })}
@@ -60,16 +58,35 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    posts: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { eq: "blog" } } }
+    ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+          }
+        }
+      }
+    }
+    apps: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { eq: "app" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            icon
           }
         }
       }

@@ -1,9 +1,13 @@
 import Typography from 'typography'
 import Wordpress2016 from 'typography-theme-wordpress-2016'
+import Colors from './colors'
 
 Wordpress2016.overrideThemeStyles = () => ({
   'a.gatsby-resp-image-link': {
     boxShadow: 'none',
+  },
+  a: {
+    color: Colors.primary,
   },
 })
 
@@ -11,9 +15,9 @@ delete Wordpress2016.googleFonts
 
 const typography = new Typography({
   ...Wordpress2016,
-  headerFontFamily: ['Libre Franklin', 'sans-serif'],
-  bodyFontFamily: ['Cormorant Garamond', 'serif'],
-  baseFontSize: '20px',
+  headerFontFamily: ['Montserrat', 'sans-serif'],
+  bodyFontFamily: ['Libre Franklin', 'serif'],
+  // baseFontSize: '20px',
   headerWeight: 700,
 })
 

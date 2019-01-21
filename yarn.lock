@@ -12285,15 +12285,15 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-cormorant-garamond@^0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-cormorant-garamond/-/typeface-cormorant-garamond-0.0.54.tgz#3ade5c92c4686098c6d65d1d75d53f03acd702de"
-  integrity sha512-N9F8i6b7CvhgyPTLm3szIueK6nk2samXO36y5N0Gr0VsNEaht5LXrtuwEag9vWuq/wPjR9Dj0Rb1ChGPu9Rpzw==
-
 typeface-libre-franklin@^0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-libre-franklin/-/typeface-libre-franklin-0.0.54.tgz#bde5607b324ef0eb9ad3d6b1bb9405e4dd74094a"
   integrity sha512-W4D5WaGdAoF0TIomyO8ZOTh11+5uN8eU3zbyaBKPEom7rfHNnqgMY6QHFgz2wZGRV9iSs3m9lv7ofIeVjIzeew==
+
+typeface-montserrat@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.54.tgz#3fc338db6428d73485b75aa7bd2af8c9a55b9ab3"
+  integrity sha512-Typhap0PWT299+Va0G/8ZtycHMXrH4gBWKfiW977KEBx5rXUUCa70gvqLx1fdA0WAo6bhSAQmo8uc+QFAmjPww==
 
 typography-breakpoint-constants@^0.15.10:
   version "0.15.10"
