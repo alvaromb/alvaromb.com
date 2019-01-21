@@ -30,7 +30,7 @@ class AppList extends React.PureComponent {
               >
                 <div
                   style={{
-                    padding: rhythm(0.75),
+                    padding: rhythm(0.55),
                     alignItems: 'center',
                   }}
                 >
