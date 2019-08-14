@@ -16,9 +16,8 @@ class OpenSource extends React.PureComponent {
           , having contributed to both technologies. I have also built OSS that
           has been{' '}
           <a href="https://github.com/APSL/react-native-keyboard-aware-scroll-view">
-            downloaded more than 3 million times
-          </a>
-          .
+            downloaded more than 5 million times
+          </a> and it's used by more than 25.000 projects.
         </IntroductionText>
       </>
     )
