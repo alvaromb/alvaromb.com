@@ -4,6 +4,9 @@ import React from 'react'
 import 'typeface-libre-franklin'
 import 'typeface-montserrat'
 
+import 'react-tippy/dist/tippy.css'
+import { Tooltip } from 'react-tippy'
+
 import Colors from '../utils/colors'
 import IntroductionText from './IntroductionText'
 
@@ -12,14 +15,40 @@ class Bio extends React.Component {
     return (
       <>
         <IntroductionText>
-          Hi 👋! I’m Álvaro, a software engineer living in Palma, Spain. My
-          current focus is on the intersection of mobile, front-end engineering,
-          design and product development.
+          Hi 👋! I’m Álvaro, a{' '}
+          <Tooltip
+            title="BSc., MSc. from Universitat de les Illes Balears."
+            position="bottom"
+          >
+            <span
+              style={{
+                color: Colors.primary,
+              }}
+            >
+              software engineer
+            </span>
+          </Tooltip>{' '}
+          and{' '}
+          <Tooltip
+            title="IESE Business School, University of Navarra."
+            position="bottom"
+          >
+            <span
+              style={{
+                color: Colors.primary,
+              }}
+            >
+              PDD candidate
+            </span>
+          </Tooltip>{' '}
+          living in Palma, Spain. My current focus is on the intersection of
+          engineering, product development and management.
         </IntroductionText>
         <IntroductionText>
           I have worked for startups and big companies, helping them envision
-          their mobile strategy. Currently, I serve as a Mobile Tech Lead at{' '}
-          <a href="https://www.apsl.net/">APSL.net</a>. Learn more{' '}
+          their mobile strategy and leading technical teams. Currently, I serve
+          as General Manager at{' '}
+          <a href="http://www.fundaciobit.org">Fundació Bit</a>. Learn more{' '}
           <a href="https://www.linkedin.com/in/alvaromb/">about me</a>.
         </IntroductionText>
         <p
