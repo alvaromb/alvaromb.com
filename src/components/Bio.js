@@ -3,9 +3,7 @@ import React from 'react'
 // Import typefaces
 import 'typeface-libre-franklin'
 import 'typeface-montserrat'
-
-import 'react-tippy/dist/tippy.css'
-import { Tooltip } from 'react-tippy'
+import Tooltip from 'react-simple-tooltip'
 
 import Colors from '../utils/colors'
 import IntroductionText from './IntroductionText'
@@ -17,8 +15,13 @@ class Bio extends React.Component {
         <IntroductionText>
           Hi 👋! I’m Álvaro, a{' '}
           <Tooltip
-            title="BSc., MSc. from Universitat de les Illes Balears."
-            position="bottom"
+            content={
+              <div style={{ width: 160 }}>
+                BSc., MSc. from Universitat de les Illes Balears.
+              </div>
+            }
+            fadeDuration={150}
+            radius={8}
           >
             <span
               style={{
@@ -30,15 +33,21 @@ class Bio extends React.Component {
           </Tooltip>{' '}
           and{' '}
           <Tooltip
-            title="IESE Business School, University of Navarra."
-            position="bottom"
+            content={
+              <div style={{ width: 160 }}>
+                Program for Management Development from IESE Business School,
+                University of Navarra.
+              </div>
+            }
+            fadeDuration={150}
+            radius={8}
           >
             <span
               style={{
                 color: Colors.primary,
               }}
             >
-              PDD candidate
+              PDD
             </span>
           </Tooltip>{' '}
           living in Palma, Spain. My current focus is on the intersection of
@@ -48,7 +57,7 @@ class Bio extends React.Component {
           I have worked for startups and big companies, helping them envision
           their mobile strategy and leading technical teams. Currently, I serve
           as General Manager at{' '}
-          <a href="http://www.fundaciobit.org">Fundació Bit</a>. Learn more{' '}
+          <a href="http://www.fundaciobit.org">Fundació BIT</a>. Learn more{' '}
           <a href="https://www.linkedin.com/in/alvaromb/">about me</a>.
         </IntroductionText>
         <p
