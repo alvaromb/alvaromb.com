@@ -7,6 +7,7 @@ module.exports = {
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
+    'gatsby-plugin-eslint',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,7 +38,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
@@ -49,13 +49,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Álvaro Medina Ballester`,
+        short_name: `alvaromb.com`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#FE7368`,
         display: `minimal-ui`,
-        icon: `src/assets/gatsby-icon.jpg`,
+        icon: `src/assets/amb-icon.svg`,
       },
     },
     `gatsby-plugin-offline`,

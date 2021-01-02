@@ -29,6 +29,7 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <Bio />
+        <H3>Apps</H3>
         <AppList apps={apps} />
         <OpenSource />
         <Publications />

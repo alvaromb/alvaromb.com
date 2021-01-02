@@ -8,54 +8,49 @@ import { rhythm } from '../utils/typography'
 class AppList extends React.PureComponent {
   render() {
     return (
-      <>
-        <H3>Apps</H3>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-          }}
-        >
-          {this.props.apps.map(({ node }) => {
-            const title = node.frontmatter.title
-            return (
-              <Link
-                key={node.fields.slug}
-                to={node.fields.slug}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+        }}
+      >
+        {this.props.apps.map(({ node }) => {
+          const title = node.frontmatter.title
+          return (
+            <Link
+              key={node.fields.slug}
+              to={node.fields.slug}
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+              }}
+            >
+              <div
                 style={{
-                  boxShadow: 'none',
-                  textDecoration: 'none',
+                  padding: rhythm(0.4),
+                  alignItems: 'center',
                 }}
               >
-                <div
-                  style={{
-                    padding: rhythm(0.55),
-                    alignItems: 'center',
-                  }}
-                >
-                  <MediaQuery minResolution="2dppx">
-                    {retina => (
-                      <img
-                        src={
-                          retina
-                            ? require(`../assets/${
-                                node.frontmatter.icon
-                              }@2x.jpg`)
-                            : require(`../assets/${node.frontmatter.icon}.jpg`)
-                        }
-                        style={{ marginBottom: 0, width: 94, height: 94 }}
-                      />
-                    )}
-                  </MediaQuery>
-
-                  <AppName>{title}</AppName>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
-      </>
+                <MediaQuery minResolution="2dppx">
+                  {retina => (
+                    <img
+                      alt={title}
+                      src={
+                        retina
+                          ? require(`../assets/${node.frontmatter.icon}@2x.jpg`)
+                          : require(`../assets/${node.frontmatter.icon}.jpg`)
+                      }
+                      style={{ marginBottom: 0, width: 94, height: 94 }}
+                    />
+                  )}
+                </MediaQuery>
+                <AppName>{title}</AppName>
+              </div>
+            </Link>
+          )
+        })}
+      </div>
     )
   }
 }
