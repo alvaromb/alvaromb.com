@@ -1,0 +1,44 @@
+name: Publish
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  publish:
+    # Job name
+    name: Publish personal site
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@master
+
+      - name: Build Yarn and npm
+        uses: linchpin/action-build-yarn-npm@master
+
+      - name: Github Action for Gatsby CLI
+        # You may pin to the exact commit or the version.
+        # uses: jzweifel/gatsby-cli-github-action@efa9ab058a75e8c8db6ba6094f4b14c53e96f3fc
+        uses: jzweifel/gatsby-cli-github-action@master
+        with:
+          gatsby-arg: build
+          
+      - name: Publish to surge.sh
+        # You may pin to the exact commit or the version.
+        # uses: dswistowski/surge-sh-action@c09463ed5222f67391260fa806240d4e464743d0
+        uses: dswistowski/surge-sh-action@v1.0.1
+        with:
+          # your surge.sh domain to deploy
+          domain: alvaromb.com
+          # surge.sh login
+          login: me@alvaromb.com
+          # surge.sh token, generate it with `surge token` command
+          token: ${{ secrets.SURGE_TOKEN }}
+          # your project path
+          project: public
