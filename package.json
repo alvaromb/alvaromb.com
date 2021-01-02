@@ -26,7 +26,6 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
-    "react-responsive": "^6.0.1",
     "react-simple-tooltip": "^2.6.2",
     "react-typography": "^0.16.13",
     "typeface-libre-franklin": "^0.0.54",
