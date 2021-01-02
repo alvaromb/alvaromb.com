@@ -17,7 +17,7 @@ class Layout extends React.Component {
         <div style={{ marginTop: 404 }}>
           <CenteredH1>{title}</CenteredH1>
           <CenteredBottomSubtitle>
-            MOBILE APPS, DESIGN, UX & DEVELOPMENT
+            ENGINEERING, MANAGEMENT, PRODUCT & MOBILE
           </CenteredBottomSubtitle>
         </div>
       )
