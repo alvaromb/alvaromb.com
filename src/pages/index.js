@@ -19,7 +19,7 @@ class BlogIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.posts.edges')
-    // const apps = get(this, 'props.data.apps.edges')
+    const apps = get(this, 'props.data.apps.edges')
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <Bio />
-        <AppList />
+        <AppList apps={apps} />
         <OpenSource />
         <Publications />
         <H3>Blog</H3>
@@ -61,6 +61,24 @@ export const pageQuery = graphql`
         description
       }
     }
+    apps: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { eq: "app" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            icon
+          }
+          excerpt
+        }
+      }
+    }
     posts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { eq: "blog" } } }
@@ -79,21 +97,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// apps: allMarkdownRemark(
-//   sort: { fields: [frontmatter___date], order: DESC }
-//   filter: { frontmatter: { category: { eq: "app" } } }
-// ) {
-//   edges {
-//     node {
-//       fields {
-//         slug
-//       }
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         title
-//         icon
-//       }
-//     }
-//   }
-// }

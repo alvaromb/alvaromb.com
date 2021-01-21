@@ -1,21 +1,21 @@
 import React from 'react'
 import Colors from '../utils/colors'
+import { rhythm } from '../utils/typography'
 
 class AppName extends React.PureComponent {
   render() {
     return (
-      <p
+      <span
         style={{
-          color: Colors.grey,
-          fontSize: 15,
+          color: Colors.body,
+          fontSize: 17,
           fontWeight: '600',
           fontFamily: 'Montserrat',
-          textAlign: 'center',
-          width: 94,
+          paddingBottom: rhythm(0.2),
         }}
       >
         {this.props.children}
-      </p>
+      </span>
     )
   }
 }
