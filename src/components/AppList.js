@@ -1,56 +1,61 @@
 import React from 'react'
-import MediaQuery from 'react-responsive'
 import { Link } from 'gatsby'
 import H3 from './H3'
 import AppName from './AppName'
+import AppDesc from './AppDesc'
 import { rhythm } from '../utils/typography'
 
-class AppList extends React.PureComponent {
+class AppList extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-        }}
-      >
-        {this.props.apps.map(({ node }) => {
-          const title = node.frontmatter.title
-          return (
-            <Link
-              key={node.fields.slug}
-              to={node.fields.slug}
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-              }}
-            >
-              <div
+      <>
+        <H3>Apps</H3>
+        <div style={{ paddingBottom: rhythm(0.6) }}>
+          {this.props.apps.map(({ node }) => {
+            const title = node.frontmatter.title
+            const desc = node.excerpt
+            return (
+              <Link
+                key={`${node.fields.slug}-applink`}
+                to={node.fields.slug}
                 style={{
-                  padding: rhythm(0.4),
-                  alignItems: 'center',
+                  boxShadow: 'none',
+                  textDecoration: 'none',
                 }}
               >
-                <MediaQuery minResolution="2dppx">
-                  {retina => (
-                    <img
-                      alt={title}
-                      src={
-                        retina
-                          ? require(`../assets/${node.frontmatter.icon}@2x.jpg`)
-                          : require(`../assets/${node.frontmatter.icon}.jpg`)
-                      }
-                      style={{ marginBottom: 0, width: 94, height: 94 }}
-                    />
-                  )}
-                </MediaQuery>
-                <AppName>{title}</AppName>
-              </div>
-            </Link>
-          )
-        })}
-      </div>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    padding: rhythm(0.4),
+                    alignItems: 'center',
+                  }}
+                >
+                  <img
+                    alt={title}
+                    src={require(`../assets/${node.frontmatter.icon}@2x.jpg`)}
+                    style={{
+                      marginBottom: 0,
+                      width: 94,
+                      height: 94,
+                    }}
+                  />
+                  <div
+                    style={{
+                      paddingLeft: rhythm(0.6),
+                      display: 'flex',
+                      flexDirection: 'column',
+                    }}
+                  >
+                    <AppName>{title}</AppName>
+                    <AppDesc>{desc}</AppDesc>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+      </>
     )
   }
 }

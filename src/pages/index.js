@@ -29,7 +29,6 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <Bio />
-        <H3>Apps</H3>
         <AppList apps={apps} />
         <OpenSource />
         <Publications />
@@ -62,22 +61,6 @@ export const pageQuery = graphql`
         description
       }
     }
-    posts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: "blog" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
-      }
-    }
     apps: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { eq: "app" } } }
@@ -91,6 +74,23 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             icon
+          }
+          excerpt
+        }
+      }
+    }
+    posts: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { eq: "blog" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
           }
         }
       }
