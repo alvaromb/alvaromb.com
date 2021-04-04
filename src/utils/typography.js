@@ -1,25 +1,17 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
+import grandViewTheme from 'typography-theme-grand-view'
 import Colors from './colors'
 
-Wordpress2016.overrideThemeStyles = () => ({
-  'a.gatsby-resp-image-link': {
-    boxShadow: 'none',
-  },
+grandViewTheme.overrideThemeStyles = () => ({
   a: {
     color: Colors.primary,
   },
+  "a:hover,a:active": {
+    color: Colors.primary,
+    textDecoration: "underline"
+  },
 })
-
-delete Wordpress2016.googleFonts
-
-const typography = new Typography({
-  ...Wordpress2016,
-  headerFontFamily: ['Montserrat', 'sans-serif'],
-  bodyFontFamily: ['Libre Franklin', 'serif'],
-  baseFontSize: '22px',
-  headerWeight: 700,
-})
+const typography = new Typography(grandViewTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import H3 from './H3'
 import AppName from './AppName'
 import AppDesc from './AppDesc'
 import { rhythm } from '../utils/typography'
@@ -9,7 +8,7 @@ class AppList extends React.Component {
   render() {
     return (
       <>
-        <H3>Apps</H3>
+        <h3>Apps</h3>
         <div style={{ paddingBottom: rhythm(0.6) }}>
           {this.props.apps.map(({ node }) => {
             const title = node.frontmatter.title

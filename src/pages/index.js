@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import H3 from '../components/H3'
 import AppList from '../components/AppList'
 import OpenSource from '../components/OpenSource'
 import Publications from '../components/Publications'
@@ -32,17 +31,17 @@ class BlogIndex extends React.Component {
         <AppList apps={apps} />
         <OpenSource />
         <Publications />
-        <H3>Blog</H3>
+        <h3>Blog</h3>
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <div key={node.fields.slug}>
               <small>{node.frontmatter.date}</small>
-              <H3>
+              <h3>
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
-              </H3>
+              </h3>
             </div>
           )
         })}

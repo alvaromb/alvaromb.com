@@ -26,11 +26,8 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-simple-tooltip": "^2.6.2",
-    "react-typography": "^0.16.13",
-    "typeface-libre-franklin": "^1.1.13",
-    "typeface-montserrat": "^1.1.13",
     "typography": "^0.16.17",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "typography-theme-grand-view": "^0.16.19"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

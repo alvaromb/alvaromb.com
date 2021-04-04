@@ -1,12 +1,11 @@
 import React from 'react'
-import H3 from './H3'
 import IntroductionText from './IntroductionText'
 
 class OpenSource extends React.PureComponent {
   render() {
     return (
       <>
-        <H3>Open Source</H3>
+        <h3>Open Source</h3>
         <IntroductionText>
           I've been building and collaborating to open source software since the
           beginning of my engineering career. My current focus is on React and{' '}

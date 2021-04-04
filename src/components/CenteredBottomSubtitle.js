@@ -8,11 +8,9 @@ class CenteredBottomSubtitle extends React.Component {
     return (
       <div
         style={{
-          // ...scale(1.5),
+          ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
-          fontFamily: 'Montserrat, sans-serif',
-          fontWeight: '600',
           fontSize: 16,
           color: Colors.primary,
           textAlign: 'center',

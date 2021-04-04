@@ -1,12 +1,11 @@
 import React from 'react'
-import H3 from './H3'
 import IntroductionText from './IntroductionText'
 
 class Publications extends React.PureComponent {
   render() {
     return (
       <>
-        <H3>Publications</H3>
+        <h3>Publications</h3>
         <IntroductionText>
           I have several publications in different types of media on Internet. I
           published two React Native courses on PacktPub:{' '}

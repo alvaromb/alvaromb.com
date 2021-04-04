@@ -1,8 +1,4 @@
 import React from 'react'
-
-// Import typefaces
-import 'typeface-libre-franklin'
-import 'typeface-montserrat'
 import Tooltip from 'react-simple-tooltip'
 
 import Colors from '../utils/colors'
@@ -64,7 +60,6 @@ class Bio extends React.Component {
           style={{
             color: Colors.grey,
             fontSize: 16,
-            fontFamily: 'Libre Franklin',
           }}
         >
           The header image is a simulation of material orbiting close to a Black

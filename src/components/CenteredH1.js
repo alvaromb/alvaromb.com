@@ -11,7 +11,6 @@ class CenteredH1 extends React.Component {
           ...scale(0),
           marginBottom: rhythm(0.5),
           marginTop: 0,
-          fontFamily: 'Montserrat, sans-serif',
           fontWeight: '800',
           fontSize: 36,
           color: Colors.body,

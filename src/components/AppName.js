@@ -7,10 +7,6 @@ class AppName extends React.PureComponent {
     return (
       <span
         style={{
-          color: Colors.body,
-          fontSize: 17,
-          fontWeight: '600',
-          fontFamily: 'Montserrat',
           paddingBottom: rhythm(0.2),
         }}
       >
