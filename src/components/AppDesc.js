@@ -9,7 +9,6 @@ class AppDesc extends React.PureComponent {
           color: Colors.grey,
           fontSize: 15,
           fontWeight: '400',
-          fontFamily: 'Libre Franklin, sans-serif',
         }}
       >
         {this.props.children}

@@ -6,9 +6,7 @@ class IntroductionText extends React.PureComponent {
     return (
       <p
         style={{
-          color: Colors.body,
-          fontSize: 20,
-          fontFamily: 'Libre Franklin',
+          fontSize: 18,
         }}
       >
         {this.props.children}
