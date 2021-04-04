@@ -5,9 +5,6 @@ module.exports = {
     es6: true,
   },
   plugins: ['react'],
-  globals: {
-    graphql: false,
-  },
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {
