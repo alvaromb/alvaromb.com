@@ -32,7 +32,10 @@ class AppList extends React.Component {
                 >
                   <img
                     alt={title}
-                    src={require(`../assets/${node.frontmatter.icon}@2x.jpg`)}
+                    src={
+                      require(`../assets/${node.frontmatter.icon}@2x.jpg`)
+                        .default
+                    }
                     style={{
                       marginBottom: 0,
                       width: 94,
