@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import '@fontsource/alegreya'
+import '@fontsource/alegreya-sans'
 import get from 'lodash.get'
 import Helmet from 'react-helmet'
 
@@ -8,7 +10,6 @@ import Layout from '../components/Layout'
 import AppList from '../components/AppList'
 import OpenSource from '../components/OpenSource'
 import Publications from '../components/Publications'
-import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
   render() {
@@ -38,9 +39,7 @@ class BlogIndex extends React.Component {
             <div key={node.fields.slug}>
               <small>{node.frontmatter.date}</small>
               <h3>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
+                <Link to={node.fields.slug}>{title}</Link>
               </h3>
             </div>
           )

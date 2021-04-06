@@ -1,23 +1,17 @@
 import Typography from 'typography'
-import grandViewTheme from 'typography-theme-grand-view'
-import Colors from './colors'
+import theme from 'typography-theme-de-young'
+import colors from './colors'
 
-grandViewTheme.overrideThemeStyles = () => ({
-  a: {
-    color: Colors.primary,
-  },
-  "a:hover,a:active": {
-    color: Colors.primary,
-    textDecoration: "underline"
+theme.bodyColor = colors.text
+theme.headerColor = colors.primary
+theme.overrideThemeStyles = ({}, options) => ({
+  a: { color: colors.secondary },
+  'h1,h2,h3,h4,h5,h6': {
+    color: options.headerColor,
   },
 })
-const typography = new Typography(grandViewTheme)
 
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== 'production') {
-  typography.injectStyles()
-}
+const typography = new Typography(theme)
 
+export const { scale, rhythm, options } = typography
 export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale

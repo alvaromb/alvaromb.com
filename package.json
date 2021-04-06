@@ -7,6 +7,8 @@
     "url": "https://github.com/alvaromb/alvaromb.com/issues"
   },
   "dependencies": {
+    "@fontsource/alegreya": "^4.2.3",
+    "@fontsource/alegreya-sans": "^4.2.3",
     "gatsby": "^3.2.1",
     "gatsby-plugin-feed": "^3.2.0",
     "gatsby-plugin-plausible": "^0.0.7",
@@ -24,17 +26,18 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-simple-tooltip": "^2.6.2",
-    "typography": "^0.16.17",
-    "typography-theme-grand-view": "^0.16.19"
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-de-young": "^0.16.19"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.17.0",
+    "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.22.0",
+    "eslint-webpack-plugin": "^2.5.3",
     "gatsby-plugin-eslint": "^3.0.0",
     "prettier": "^2.2.1"
   },

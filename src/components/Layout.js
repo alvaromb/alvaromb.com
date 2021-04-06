@@ -1,10 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import CenteredH1 from './CenteredH1'
-import CenteredBottomSubtitle from './CenteredBottomSubtitle'
-import { rhythm, scale } from '../utils/typography'
-
-import backgroundImage from '../assets/Background.jpg'
 
 class Layout extends React.Component {
   render() {
@@ -14,26 +9,21 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <div style={{ marginTop: 404 }}>
-          <CenteredH1>{title}</CenteredH1>
-          <CenteredBottomSubtitle>
-            ENGINEERING, MANAGEMENT, PRODUCT & MOBILE
-          </CenteredBottomSubtitle>
+        <div>
+          <h1>{title}</h1>
+          <div>ENGINEERING, MANAGEMENT, PRODUCT & MOBILE</div>
         </div>
       )
     } else {
       header = (
-        <div style={{ marginTop: 404 }}>
-          <h3
-            style={{
-              marginTop: 0,
-              marginBottom: rhythm(-1),
-            }}
-          >
+        <div>
+          <h3>
             <Link
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
+              sx={{
+                color: 'inherit',
+                '&.active': {
+                  color: 'primary',
+                },
               }}
               to={'/'}
             >
@@ -46,24 +36,14 @@ class Layout extends React.Component {
     return (
       <div
         style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center top',
-          overflow: 'hidden',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          maxWidth: 700,
+          paddingBottom: 80,
         }}
       >
-        <div
-          style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            maxWidth: 588,
-            padding: `0 ${rhythm(3 / 4)}`,
-            paddingBottom: 80,
-          }}
-        >
-          {header}
-          {children}
-        </div>
+        {header}
+        {children}
       </div>
     )
   }

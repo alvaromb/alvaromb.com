@@ -6,17 +6,18 @@ module.exports = {
     siteUrl: 'http://alvaromb.com',
   },
   plugins: [
+    // Adds ESLint to your Gatsby dev environment, maintaining code quality as you develop.
     'gatsby-plugin-eslint',
     // A Gatsby source plugin for sourcing data into your Gatsby application from your local filesystem.
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages/blog`,
         name: 'blog',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages/apps`,
         name: 'apps',
@@ -24,21 +25,21 @@ module.exports = {
     },
     // Parses Markdown files using Remark.
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           // Processes images in markdown so they can be used in the production build.
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 590,
             },
           },
           // Wraps iframes or objects (e.g. embedded YouTube videos) within markdown files in a responsive elastic container with a fixed aspect ratio. This ensures that the iframe or object will scale proportionally and to the full width of its container.
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: 'margin-bottom: 1.0725rem',
             },
           },
           // Copies local files linked to/from Markdown (.md|.markdown) files to the root directory (i.e., public folder).
@@ -49,24 +50,24 @@ module.exports = {
       },
     },
     // Creates ImageSharp nodes from image types that are supported by the Sharp image processing library and provides fields in their GraphQL types for processing your images in a variety of ways including resizing, cropping, and creating responsive images.
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     // Create an RSS feed (or multiple feeds) for your Gatsby site.
-    `gatsby-plugin-feed`,
+    'gatsby-plugin-feed',
     // Provides drop-in support for server rendering data added with React Helmet.
-    `gatsby-plugin-react-helmet`,
-    // A Gatsby plugin for utilizing the Typography library with minimal configuration.
+    'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: 'src/utils/typography',
+        pathToConfigModule: `src/utils/typography`,
+        omitGoogleFont: true,
       },
     },
     // Plausible analytics
     {
-      resolve: `gatsby-plugin-plausible`,
+      resolve: 'gatsby-plugin-plausible',
       options: {
-        domain: `alvaromb.com`,
+        domain: 'alvaromb.com',
       },
     },
   ],

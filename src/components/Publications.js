@@ -1,12 +1,11 @@
 import React from 'react'
-import IntroductionText from './IntroductionText'
 
 class Publications extends React.PureComponent {
   render() {
     return (
       <>
         <h3>Publications</h3>
-        <IntroductionText>
+        <p>
           I have several publications in different types of media on Internet. I
           published two React Native courses on PacktPub:{' '}
           <a href="https://www.packtpub.com/application-development/building-your-application-react-native-video">
@@ -19,7 +18,7 @@ class Publications extends React.PureComponent {
           . I'm also an active StackOverflow user, you can check my profile and
           reputation{' '}
           <a href="https://stackoverflow.com/users/1034126/amb">here</a>.
-        </IntroductionText>
+        </p>
       </>
     )
   }

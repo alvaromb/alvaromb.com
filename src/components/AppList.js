@@ -1,15 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import AppName from './AppName'
-import AppDesc from './AppDesc'
-import { rhythm } from '../utils/typography'
 
 class AppList extends React.Component {
   render() {
     return (
       <>
         <h3>Apps</h3>
-        <div style={{ paddingBottom: rhythm(0.6) }}>
+        <div>
           {this.props.apps.map(({ node }) => {
             const title = node.frontmatter.title
             const desc = node.excerpt
@@ -26,7 +23,6 @@ class AppList extends React.Component {
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    padding: rhythm(0.4),
                     alignItems: 'center',
                   }}
                 >
@@ -44,13 +40,12 @@ class AppList extends React.Component {
                   />
                   <div
                     style={{
-                      paddingLeft: rhythm(0.6),
                       display: 'flex',
                       flexDirection: 'column',
                     }}
                   >
-                    <AppName>{title}</AppName>
-                    <AppDesc>{desc}</AppDesc>
+                    <span>{title}</span>
+                    <span>{desc}</span>
                   </div>
                 </div>
               </Link>
