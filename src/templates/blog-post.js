@@ -1,10 +1,9 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash.get'
 
 import Bio from '../components/Bio'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,12 +13,12 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
-        />
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        siteDescription={siteDescription}
+        siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
+      >
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
