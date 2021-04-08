@@ -18,7 +18,7 @@ const ListLink = (props) => (
 
 class Layout extends React.Component {
   render() {
-    const { title, children, siteDescription, siteTitle } = this.props
+    const { children, siteDescription, siteTitle } = this.props
 
     return (
       <div>
@@ -54,9 +54,9 @@ class Layout extends React.Component {
             >
               <ListLink to="/">Home</ListLink>
               <ListLink to="/about/">About</ListLink>
-              <ListLink to="/contact/">Projects</ListLink>
+              <ListLink to="/projects/">Projects</ListLink>
               <ListLink to="/blog/">Blog</ListLink>
-              <ListLink to="/blog/">Notes</ListLink>
+              <ListLink to="/notes/">Notes</ListLink>
             </ul>
           </header>
           {children}

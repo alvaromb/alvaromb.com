@@ -1,11 +1,11 @@
 import Typography from 'typography'
 import theme from 'typography-theme-de-young'
-import colors from './colors'
+import Colors from './colors'
 
-theme.bodyColor = colors.text
-theme.headerColor = colors.primary
+theme.bodyColor = Colors.text
+theme.headerColor = Colors.primary
 theme.overrideThemeStyles = ({}, options) => ({
-  a: { color: colors.secondary },
+  a: { color: Colors.secondary },
   'h1,h2,h3,h4,h5,h6': {
     color: options.headerColor,
   },

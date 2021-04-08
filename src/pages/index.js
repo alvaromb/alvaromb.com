@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import '@fontsource/alegreya'
 import '@fontsource/alegreya-sans'
 import get from 'lodash.get'
@@ -10,14 +10,14 @@ import Layout from '../components/layout'
 // import OpenSource from '../components/OpenSource'
 import Publications from '../components/Publications'
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteDescription = get(
       this,
       'props.data.site.siteMetadata.description'
     )
-    const posts = get(this, 'props.data.posts.edges')
+
     // const apps = get(this, 'props.data.apps.edges')
 
     return (
@@ -30,24 +30,12 @@ class BlogIndex extends React.Component {
         {/* <AppList apps={apps} />
         <OpenSource /> */}
         <Publications />
-        <h3>Blog</h3>
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <small>{node.frontmatter.date}</small>
-              <h3>
-                <Link to={node.fields.slug}>{title}</Link>
-              </h3>
-            </div>
-          )
-        })}
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {
@@ -72,22 +60,6 @@ export const pageQuery = graphql`
             icon
           }
           excerpt
-        }
-      }
-    }
-    posts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: "blog" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
         }
       }
     }

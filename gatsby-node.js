@@ -34,7 +34,6 @@ exports.createPages = async ({ graphql, actions }) => {
     console.error(postQuery.errors)
     return postQuery.errors
   }
-
   // Create blog posts pages
   const posts = postQuery.data.allFile.nodes
   posts.forEach((post, index) => {
@@ -61,7 +60,10 @@ exports.createPages = async ({ graphql, actions }) => {
           fields: childrenMarkdownRemark___frontmatter___date
           order: DESC
         }
-        filter: { sourceInstanceName: { eq: "apps" } }
+        filter: {
+          sourceInstanceName: { eq: "apps" }
+          childrenMarkdownRemark: { elemMatch: { id: { nin: "null" } } }
+        }
         limit: 20
       ) {
         nodes {

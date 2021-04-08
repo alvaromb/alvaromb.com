@@ -16,16 +16,6 @@ class Bio extends React.Component {
           <a href="http://www.fundaciobit.org">Fundació BIT</a>. Learn more{' '}
           <a href="https://www.linkedin.com/in/alvaromb/">about me</a>.
         </p>
-        <p
-          style={{
-            fontSize: 16,
-          }}
-        >
-          The header image is a simulation of material orbiting close to a Black
-          Hole.{' '}
-          <a href="https://www.eso.org/public/images/eso1835a/">Original</a>.
-          Credits: ESO/Gravity Consortium/L. Calçada.
-        </p>
       </>
     )
   }

@@ -1,4 +1,4 @@
-const colors = Object.freeze({
+const Colors = Object.freeze({
   background: '#B0C0BC',
   primary: '#11230A',
   secondary: '#FFD639',
@@ -8,4 +8,4 @@ const colors = Object.freeze({
   gray: '#CBCBCD',
 })
 
-export default colors
+export default Colors
