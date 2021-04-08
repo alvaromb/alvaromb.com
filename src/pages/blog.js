@@ -19,11 +19,12 @@ const Blog = (props) => {
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
-            <li key={node.fields.slug}>
+            <li key={node.fields.slug} style={{ marginBottom: 30 }}>
               <small>{node.frontmatter.date}</small>
               <h2 style={{ marginTop: 5 }}>
                 <Link to={node.fields.slug}>{title}</Link>
               </h2>
+              <p>{node.excerpt}</p>
             </li>
           )
         })}
@@ -55,6 +56,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
           }
+          excerpt
         }
       }
     }
