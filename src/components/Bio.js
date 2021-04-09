@@ -4,12 +4,12 @@ class Bio extends React.Component {
   render() {
     return (
       <>
-        <p>
+        <p style={{ fontSize: 26 }}>
           Hi 👋! I’m Álvaro, a software engineer and PDD living in Palma, Spain.
           My current focus is on the intersection of engineering, product
           development and management.
         </p>
-        <p>
+        <p style={{ fontSize: 26 }}>
           I have worked for startups and big companies, helping them envision
           their mobile strategy and leading technical teams. Currently, I serve
           as General Manager at{' '}

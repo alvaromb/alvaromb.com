@@ -8,7 +8,7 @@ const Blog = (props) => {
   const posts = get(props, 'data.posts.edges')
   return (
     <Layout>
-      <h1>Blog</h1>
+      <h2>Blog</h2>
       <ul
         style={{
           listStyle: 'none',

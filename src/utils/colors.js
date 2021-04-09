@@ -1,11 +1,9 @@
 const Colors = Object.freeze({
-  background: '#B0C0BC',
-  primary: '#11230A',
-  secondary: '#FFD639',
-  text: '#453F3C',
-  darken: '#797270',
-  muted: '#A7A7A9',
-  gray: '#CBCBCD',
+  background: '#F0FAF5',
+  primary: '#0C4613',
+  secondary: '#D50C2F',
+  text: '#1D2021',
+  gray: '#898C90',
 })
 
 export default Colors

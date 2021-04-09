@@ -6,9 +6,6 @@ import get from 'lodash.get'
 
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
-// import AppList from '../components/AppList'
-// import OpenSource from '../components/OpenSource'
-import Publications from '../components/Publications'
 
 class Index extends React.Component {
   render() {
@@ -18,18 +15,10 @@ class Index extends React.Component {
       'props.data.site.siteMetadata.description'
     )
 
-    // const apps = get(this, 'props.data.apps.edges')
-
     return (
-      <Layout
-        location={this.props.location}
-        title={siteTitle}
-        siteDescription={siteDescription}
-      >
+      <Layout title={siteTitle} siteDescription={siteDescription}>
+        <h1>Álvaro Medina Ballester</h1>
         <Bio />
-        {/* <AppList apps={apps} />
-        <OpenSource /> */}
-        <Publications />
       </Layout>
     )
   }

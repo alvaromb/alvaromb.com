@@ -2,6 +2,7 @@ import Typography from 'typography'
 import theme from 'typography-theme-de-young'
 import Colors from './colors'
 
+theme.baseFontSize = 22
 theme.bodyColor = Colors.text
 theme.headerColor = Colors.primary
 theme.overrideThemeStyles = ({}, options) => ({

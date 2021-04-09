@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 const Notes = () => {
   return (
     <Layout>
-      <h1>Notes</h1>
+      <h2>Notes</h2>
     </Layout>
   )
 }

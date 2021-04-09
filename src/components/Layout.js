@@ -3,18 +3,9 @@ import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Logo from '../components/logo'
+import ListLink from '../components/listLink'
+import Footer from '../components/footer'
 import Colors from '../utils/colors'
-
-const ListLink = (props) => (
-  <li
-    style={{
-      display: `inline-block`,
-      marginRight: `1rem`,
-    }}
-  >
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
 
 class Layout extends React.Component {
   render() {
@@ -41,7 +32,10 @@ class Layout extends React.Component {
             }}
           >
             <div style={{ display: 'inline' }}>
-              <Link style={{ color: Colors.primary }} to={'/'}>
+              <Link
+                style={{ color: Colors.primary, textDecoration: 'none' }}
+                to={'/'}
+              >
                 <Logo />
               </Link>
             </div>
@@ -49,10 +43,8 @@ class Layout extends React.Component {
               style={{
                 listStyle: `none`,
                 float: `right`,
-                marginTop: 0,
               }}
             >
-              <ListLink to="/">Home</ListLink>
               <ListLink to="/about/">About</ListLink>
               <ListLink to="/projects/">Projects</ListLink>
               <ListLink to="/blog/">Blog</ListLink>
@@ -60,6 +52,8 @@ class Layout extends React.Component {
             </ul>
           </header>
           {children}
+          <hr />
+          <Footer />
         </div>
       </div>
     )

@@ -23,6 +23,15 @@ module.exports = {
         name: 'apps',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data`,
+        name: 'yaml',
+      },
+    },
+    // Parses yaml files
+    'gatsby-transformer-yaml',
     // Parses Markdown files using Remark.
     {
       resolve: 'gatsby-transformer-remark',
