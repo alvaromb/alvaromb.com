@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash.get'
 
-import Bio from '../components/Bio'
+import ShortBio from '../components/shortBio'
 import Layout from '../components/layout'
 
 class BlogPostTemplate extends React.Component {
@@ -18,6 +18,7 @@ class BlogPostTemplate extends React.Component {
         title={siteTitle}
         siteDescription={siteDescription}
         siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
+        footer={<ShortBio />}
       >
         <h1>{post.frontmatter.title}</h1>
         <p
@@ -28,8 +29,6 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <Bio />
 
         <ul
           style={{

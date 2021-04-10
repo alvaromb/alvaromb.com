@@ -9,7 +9,7 @@ import Colors from '../utils/colors'
 
 class Layout extends React.Component {
   render() {
-    const { children, siteDescription, siteTitle } = this.props
+    const { children, siteDescription, siteTitle, footer } = this.props
 
     return (
       <div>
@@ -53,6 +53,7 @@ class Layout extends React.Component {
           </header>
           {children}
           <hr />
+          {footer}
           <Footer />
         </div>
       </div>

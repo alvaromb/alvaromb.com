@@ -15,7 +15,7 @@ const Footer = () => {
     }
   `)
   return (
-    <>
+    <div style={{ marginTop: rhythm(1.5) }}>
       <div>
         <ul
           style={{
@@ -41,7 +41,7 @@ const Footer = () => {
       <div style={{ marginTop: rhythm(1) }}>
         <span>&copy; 2021 Álvaro.</span>
       </div>
-    </>
+    </div>
   )
 }
 

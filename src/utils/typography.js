@@ -10,6 +10,11 @@ theme.overrideThemeStyles = ({}, options) => ({
   'h1,h2,h3,h4,h5,h6': {
     color: options.headerColor,
   },
+  small: {
+    fontFamily: ['Alegreya Sans', 'sans-serif'].join(','),
+    color: Colors.gray,
+    bodyWeight: 200,
+  },
 })
 
 const typography = new Typography(theme)

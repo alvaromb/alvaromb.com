@@ -1,24 +1,32 @@
 import React from 'react'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
-class Bio extends React.Component {
-  render() {
-    return (
-      <>
-        <p style={{ fontSize: 26 }}>
-          Hi 👋! I’m Álvaro, a software engineer and PDD living in Palma, Spain.
-          My current focus is on the intersection of engineering, product
-          development and management.
-        </p>
-        <p style={{ fontSize: 26 }}>
-          I have worked for startups and big companies, helping them envision
-          their mobile strategy and leading technical teams. Currently, I serve
-          as General Manager at{' '}
-          <a href="http://www.fundaciobit.org">Fundació BIT</a>. Learn more{' '}
-          <a href="https://www.linkedin.com/in/alvaromb/">about me</a>.
-        </p>
-      </>
-    )
-  }
+const Bio = () => {
+  const data = useStaticQuery(graphql`
+    {
+      dataYaml {
+        introduction
+      }
+    }
+  `)
+  return (
+    <>
+      <p style={{ fontSize: 26 }}>{data.dataYaml.introduction}</p>
+      <p style={{ fontSize: 26 }}>
+        I have worked for startups and big companies, helping them envision
+        their mobile strategy and leading technical teams. Currently, I serve as
+        General Manager at{' '}
+        <a
+          href="http://www.fundaciobit.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Fundació BIT
+        </a>
+        . Learn more <Link to="about/">about me</Link>.
+      </p>
+    </>
+  )
 }
 
 export default Bio
