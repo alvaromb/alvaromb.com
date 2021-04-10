@@ -48,7 +48,7 @@
     @apply text-lg leading-relaxed text-text;
   }
   pre {
-    @apply my-3;
+    @apply my-3 bg-gray-700 p-1 rounded;
   }
   code {
     @apply leading-relaxed text-base text-gray-100 bg-gray-700 p-1 rounded;
