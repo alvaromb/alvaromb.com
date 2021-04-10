@@ -1,8 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { rhythm } from '../utils/typography'
-
 const Footer = () => {
   const data = useStaticQuery(graphql`
     {
@@ -15,30 +13,24 @@ const Footer = () => {
     }
   `)
   return (
-    <div style={{ marginTop: rhythm(1.5) }}>
+    <div class="mt-6">
       <div>
-        <ul
-          style={{
-            listStyle: `none`,
-            margin: 0,
-          }}
-        >
+        <ul class="list-none ml-0">
           {data.allFooterYaml.nodes.map((service, i) => (
-            <li
-              key={`link-${i}`}
-              style={{
-                display: `inline-block`,
-                marginRight: `1rem`,
-              }}
-            >
-              <a href={service.link} target="_blank" rel="noopener noreferrer">
+            <li key={`link-${i}`} class="mr-4 inline-block">
+              <a
+                class="text-xl"
+                href={service.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {service.name}
               </a>
             </li>
           ))}
         </ul>
       </div>
-      <div style={{ marginTop: rhythm(1) }}>
+      <div class="mt-4">
         <span>&copy; 2021 Álvaro.</span>
       </div>
     </div>

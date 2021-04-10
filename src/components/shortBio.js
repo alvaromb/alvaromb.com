@@ -10,9 +10,12 @@ const ShortBio = () => {
     }
   `)
   return (
-    <small>
-      {data.dataYaml.introduction} Learn more <Link to="about/">about me</Link>.
-    </small>
+    <div class="pt-5">
+      <small>
+        {data.dataYaml.introduction} Learn more{' '}
+        <Link to="about/">about me</Link>.
+      </small>
+    </div>
   )
 }
 

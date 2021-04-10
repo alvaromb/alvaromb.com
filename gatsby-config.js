@@ -65,13 +65,7 @@ module.exports = {
     'gatsby-plugin-feed',
     // Provides drop-in support for server rendering data added with React Helmet.
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-        omitGoogleFont: true,
-      },
-    },
+    'gatsby-plugin-postcss',
     // Plausible analytics
     {
       resolve: 'gatsby-plugin-plausible',

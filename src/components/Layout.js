@@ -12,44 +12,28 @@ class Layout extends React.Component {
     const { children, siteDescription, siteTitle, footer } = this.props
 
     return (
-      <div>
+      <div class="max-w-screen-md my-12 mx-auto py-0 pv-4">
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
-          bodyAttributes={{ style: `background-color: ${Colors.background}` }}
         />
-        <div
-          style={{
-            margin: '3rem auto',
-            maxWidth: 800,
-            padding: `0 1rem`,
-          }}
-        >
-          <header
-            style={{
-              marginBottom: `1.5rem`,
-            }}
-          >
-            <div style={{ display: 'inline' }}>
-              <Link
-                style={{ color: Colors.primary, textDecoration: 'none' }}
-                to={'/'}
-              >
-                <Logo />
-              </Link>
-            </div>
-            <ul
-              style={{
-                listStyle: `none`,
-                float: `right`,
-              }}
+        <div>
+          <header class="mb-7 flex flex-row items-center">
+            <Link
+              style={{ color: Colors.primary, textDecoration: 'none' }}
+              to={'/'}
             >
-              <ListLink to="/about/">About</ListLink>
-              <ListLink to="/projects/">Projects</ListLink>
-              <ListLink to="/blog/">Blog</ListLink>
-              <ListLink to="/notes/">Notes</ListLink>
-            </ul>
+              <Logo />
+            </Link>
+            <div class="flex-auto">
+              <ul class="list-none float-right">
+                <ListLink to="/about/">About</ListLink>
+                <ListLink to="/projects/">Projects</ListLink>
+                <ListLink to="/blog/">Blog</ListLink>
+                <ListLink to="/notes/">Notes</ListLink>
+              </ul>
+            </div>
           </header>
           {children}
           <hr />

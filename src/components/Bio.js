@@ -11,8 +11,8 @@ const Bio = () => {
   `)
   return (
     <>
-      <p style={{ fontSize: 26 }}>{data.dataYaml.introduction}</p>
-      <p style={{ fontSize: 26 }}>
+      <p class="home-intro">{data.dataYaml.introduction}</p>
+      <p class="home-intro">
         I have worked for startups and big companies, helping them envision
         their mobile strategy and leading technical teams. Currently, I serve as
         General Manager at{' '}

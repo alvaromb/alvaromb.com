@@ -2,13 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const ListLink = (props) => (
-  <li
-    style={{
-      display: `inline-block`,
-      marginRight: `1rem`,
-    }}
-  >
-    <Link to={props.to}>{props.children}</Link>
+  <li class="inline-block mr-4">
+    <Link className="text-2xl" to={props.to}>
+      {props.children}
+    </Link>
   </li>
 )
 
