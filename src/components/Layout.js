@@ -20,10 +20,7 @@ class Layout extends React.Component {
         />
         <div>
           <header class="mb-7 flex flex-row items-center">
-            <Link
-              style={{ color: Colors.primary, textDecoration: 'none' }}
-              to={'/'}
-            >
+            <Link className="no-underline" to={'/'}>
               <Logo />
             </Link>
             <div class="flex-auto">
