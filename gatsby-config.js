@@ -30,6 +30,13 @@ module.exports = {
         name: 'yaml',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: 'images',
+      },
+    },
     // Parses yaml files
     'gatsby-transformer-yaml',
     // Parses Markdown files using Remark.
@@ -59,6 +66,7 @@ module.exports = {
       },
     },
     // Creates ImageSharp nodes from image types that are supported by the Sharp image processing library and provides fields in their GraphQL types for processing your images in a variety of ways including resizing, cropping, and creating responsive images.
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     // Create an RSS feed (or multiple feeds) for your Gatsby site.

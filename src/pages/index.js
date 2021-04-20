@@ -34,23 +34,5 @@ export const pageQuery = graphql`
         description
       }
     }
-    apps: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: "app" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            icon
-          }
-          excerpt
-        }
-      }
-    }
   }
 `

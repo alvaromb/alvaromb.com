@@ -3,7 +3,7 @@ title: SupSpot
 date: '2016-07-21T22:12:03.284Z'
 path: '/app-supspot/'
 category: 'app'
-icon: 'supspot-icon'
+icon: '../../../assets/supspot-icon.jpg'
 ---
 
 [Supspot](https://supspot.ch) is the fist dedicated software to rent Stand up Paddles and manage renting spots. It is an enterprise-distributed app that can be installed on stand-up paddles rental machines.

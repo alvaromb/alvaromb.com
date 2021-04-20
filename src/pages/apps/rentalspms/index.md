@@ -3,7 +3,7 @@ title: Rentals PMS
 date: '2018-02-12T22:12:03.284Z'
 path: '/app-rentalspms/'
 category: 'app'
-icon: 'rentalspms-icon'
+icon: '../../../assets/rentalspms-icon.jpg'
 ---
 
 Rentals PMS is one of the few projects we have started entirely on APSL. It compromises a group of software dedicated to manage vacation rental properties. One of those pieces of software is [Rentals PMS Guest App](https://www.rentalspms.com). This is an app that it is intended to help the guests of the vacation homes to manage their booking while they're on destination.

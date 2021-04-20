@@ -9,6 +9,7 @@ module.exports = {
     colors: {
       ...CustomColors,
       gray: colors.coolGray,
+      white: colors.white,
     },
     fontFamily: {
       sans: ['Alegreya Sans', 'sans-serif'],

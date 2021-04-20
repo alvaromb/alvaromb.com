@@ -3,7 +3,7 @@ title: ScanGuest
 date: '2018-11-15T22:12:03.284Z'
 path: '/app-scanguest/'
 category: 'app'
-icon: 'scanguest-icon'
+icon: '../../../assets/scanguest-icon.jpg'
 ---
 
 Scanguest is the most exciting app I've worked so far. It shows the capabilities of React Native as a super powerful platform to build user interfaces without compromising the app capabilities. The [Scanguest app](https://www.scanguest.com) is an iOS & Android app that enables the user to scan [MRZ areas](https://en.wikipedia.org/wiki/Machine-readable_passport) of personal documents to perform automatic guest check-in for rental vacation homes.

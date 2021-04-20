@@ -13,13 +13,13 @@ const Footer = () => {
     }
   `)
   return (
-    <div class="mt-6">
+    <div className="mt-6">
       <div>
-        <ul class="list-none ml-0">
+        <ul className="list-none ml-0">
           {data.allFooterYaml.nodes.map((service, i) => (
-            <li key={`link-${i}`} class="mr-4 inline-block">
+            <li key={`link-${i}`} className="mr-4 inline-block">
               <a
-                class="text-xl"
+                className="text-xl"
                 href={service.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-      <div class="mt-4">
+      <div className="mt-4">
         <span>&copy; 2021 Álvaro.</span>
       </div>
     </div>

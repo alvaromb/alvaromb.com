@@ -3,7 +3,7 @@ title: Envío Dinero
 date: '2017-07-27T22:12:03.284Z'
 path: '/app-enviodinero/'
 category: 'app'
-icon: 'enviodinero-icon'
+icon: '../../../assets/enviodinero-icon.jpg'
 ---
 
 Envío Dinero is the mobile app we built for the canadian company [EnvíoDinero.com](https://www.enviodinero.ca/enviodinero), which makes possible to send money funds to Cuba through their service.

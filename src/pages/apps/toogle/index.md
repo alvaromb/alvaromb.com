@@ -3,7 +3,7 @@ title: TUI Toogle
 date: '2017-10-13T22:12:03.284Z'
 path: '/app-toogle/'
 category: 'app'
-icon: 'toogle-icon'
+icon: '../../../assets/toogle-icon.jpg'
 ---
 
 Toogle is an internal app built for TUI Travel. I was responsible of the mobile team during the development, delivering a high quality app that it's being used by a large number of employees of the company.

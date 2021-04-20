@@ -3,7 +3,7 @@ title: Nauticheck
 date: '2016-05-03T22:12:03.284Z'
 path: '/app-nauticheck/'
 category: 'app'
-icon: 'nauticheck-icon'
+icon: '../../../assets/nauticheck-icon.jpg'
 ---
 
 Nauticheck is the mobile app for the boat management system [Nauticadvisor](https://www.nauticadvisor.com/en/nauticheck/). It was the first full app built for iOS and Android from scratch, sharing the same codebase and similar design clues.

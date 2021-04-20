@@ -3,7 +3,7 @@ title: Menéame
 date: '2015-05-13T22:12:03.284Z'
 path: '/app-meneame/'
 category: 'app'
-icon: 'meneame-icon'
+icon: '../../../assets/meneame-icon.jpg'
 ---
 
 [Menéame Noticias](https://apsl.github.io/react-native-meneame/) was the first mobile app I built fully on React Native. It was built first for iOS and later on Android by my Mobile Team at APSL when the framework supported it. We were lucky to count with help from [Ricardo Galli](https://mobile.twitter.com/gallir), who was one of our Principal Engineers at APSL at that time.

@@ -5,26 +5,25 @@ import Helmet from 'react-helmet'
 import Logo from '../components/logo'
 import ListLink from '../components/listLink'
 import Footer from '../components/footer'
-import Colors from '../utils/colors'
 
 class Layout extends React.Component {
   render() {
     const { children, siteDescription, siteTitle, footer } = this.props
 
     return (
-      <div class="max-w-screen-md my-12 mx-auto py-0 pv-4">
+      <div className="max-w-screen-md my-12 mx-auto py-0 pv-4">
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
         <div>
-          <header class="mb-7 flex flex-row items-center">
+          <header className="mb-7 flex flex-row items-center">
             <Link className="no-underline" to={'/'}>
               <Logo />
             </Link>
-            <div class="flex-auto">
-              <ul class="list-none float-right">
+            <div className="flex-auto">
+              <ul className="list-none float-right">
                 <ListLink to="/about/">About</ListLink>
                 <ListLink to="/projects/">Projects</ListLink>
                 <ListLink to="/blog/">Blog</ListLink>
@@ -33,7 +32,7 @@ class Layout extends React.Component {
             </div>
           </header>
           {children}
-          <hr />
+          <hr className="mt-8" />
           {footer}
           <Footer />
         </div>
