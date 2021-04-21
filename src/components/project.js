@@ -1,20 +1,23 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Project = (props) => {
   return (
-    <div className="flex flex-col bg-white h-40 rounded-2xl">
-      <div className="p-5 flex-1 justify-end font-sans text-md text-gray-500">
-        {props.desc}
-      </div>
-      <div className="bg-gray-100 flex flex-row rounded-b-2xl h-16">
-        <img
+    <div className="flex flex-col bg-white h-auto md:h-96 rounded-2xl ring-1 ring-primary ring-opacity-20 relative max-w-sm">
+      <Link className="absolute self-center -top-12" to={props.slug}>
+        <GatsbyImage
+          className="w-28 h-28 mx-4 rounded-full ring-2 ring-primary ring-opacity-30"
           alt={props.title}
-          src={require(`../assets/${props.icon.relativePath}`).default}
-          className="w-8 h-8 self-center mx-4 rounded-full ring-2 ring-gray-300"
+          image={getImage(props.icon)}
         />
-        <div className="flex flex-row items-center">
-          <span className="text-xl font-medium">{props.title}</span>
-        </div>
+      </Link>
+      <div className="px-12 pb-12 pt-20 flex-1 justify-end font-sans text-md text-gray-500">
+        <h3 className="font-medium">{props.title}</h3>
+        <p className="font-sans text-base my-6 text-gray-600">{props.desc}</p>
+        <Link className="uppercase tracking-widest text-sm" to={props.slug}>
+          Learn more
+        </Link>
       </div>
     </div>
   )

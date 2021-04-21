@@ -51,8 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   // Create app portfolio pages
-  // TODO: change template
-  const appPage = await path.resolve('./src/templates/blog-post.js')
+  const appPage = await path.resolve('./src/templates/project-page.js')
   const appQuery = await graphql(`
     {
       allFile(

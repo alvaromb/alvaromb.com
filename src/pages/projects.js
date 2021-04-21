@@ -11,13 +11,14 @@ const Projects = (props) => {
   return (
     <Layout>
       <h2>Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-20 mt-20">
         {apps.map((app) => (
           <Project
             key={app.node.frontmatter.title}
             title={app.node.frontmatter.title}
             desc={app.node.excerpt}
             icon={app.node.frontmatter.icon}
+            slug={app.node.fields.slug}
           />
         ))}
       </div>
@@ -42,13 +43,12 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             icon {
-              relativePath
-              # childImageSharp {
-              #   gatsbyImageData(width: 80, placeholder: BLURRED)
-              # }
+              childImageSharp {
+                gatsbyImageData(width: 224, placeholder: BLURRED)
+              }
             }
           }
-          excerpt(pruneLength: 60)
+          excerpt(pruneLength: 220)
         }
       }
     }
