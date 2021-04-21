@@ -13,10 +13,15 @@ class Layout extends React.Component {
     return (
       <div className="max-w-screen-md my-12 mx-auto py-0 pv-4">
         <Helmet
-          htmlAttributes={{ lang: 'en' }}
+          htmlAttributes={{
+            lang: 'en',
+            title: 'Alvaro Medina Ballester personal site',
+          }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
-        />
+        >
+          <title>{siteTitle}</title>
+        </Helmet>
         <div>
           <header className="mb-16 flex flex-row items-center">
             <Link className="no-underline" to={'/'}>
