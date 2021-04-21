@@ -56,6 +56,12 @@
   ul {
     @apply mt-2;
   }
+  ol {
+    @apply list-decimal font-serif pl-7 pt-4;
+  }
+  li {
+    @apply font-serif text-gray-600;
+  }
 }
 
 @layer components {

@@ -18,7 +18,7 @@ class Layout extends React.Component {
           title={siteTitle}
         />
         <div>
-          <header className="mb-7 flex flex-row items-center">
+          <header className="mb-16 flex flex-row items-center">
             <Link className="no-underline" to={'/'}>
               <Logo />
             </Link>

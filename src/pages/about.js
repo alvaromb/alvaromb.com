@@ -34,7 +34,40 @@ const About = () => {
         Before 2017 I had the luck of being in charge of the mobile team of an
         start-up incubator named Mola.com, which gave me a lot of insight and
         experience about building and scaling digital products with a lean
-        approach.
+        approach. During my career as individual contributor and manager I've
+        been able to contribute to several open source projects like Facebook's{' '}
+        <a
+          href="https://github.com/facebook/react-native/pulls?q=is%3Apr+author%3Aalvaromb+is%3Aclosed"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          react-native
+        </a>
+        ,{' '}
+        <a
+          href="https://github.com/gcanti/tcomb-form-native"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          tcomb
+        </a>
+        , and others, but I've also created popular components like{' '}
+        <a
+          href="https://github.com/APSL/react-native-keyboard-aware-scroll-view"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          react-native-keyboard-aware-scroll-view
+        </a>{' '}
+        or{' '}
+        <a
+          href="https://github.com/APSL/react-native-version-number"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          react-native-version-number
+        </a>
+        .
       </p>
 
       <ol>
