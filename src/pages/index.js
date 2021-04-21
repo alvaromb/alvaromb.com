@@ -4,7 +4,7 @@ import '@fontsource/alegreya'
 import '@fontsource/alegreya-sans'
 import get from 'lodash.get'
 
-import Bio from '../components/Bio'
+import Bio from '../components/bio'
 import Layout from '../components/layout'
 
 class Index extends React.Component {

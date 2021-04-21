@@ -13,7 +13,7 @@ const Footer = () => {
     }
   `)
   return (
-    <div className="mt-6">
+    <div>
       <div>
         <ul className="list-none ml-0">
           {data.allFooterYaml.nodes.map((service, i) => (

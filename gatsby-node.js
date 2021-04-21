@@ -104,7 +104,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: node.frontmatter.category === 'blog' ? `/blog${value}` : value,
     })
   }
 }

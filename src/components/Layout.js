@@ -32,7 +32,7 @@ class Layout extends React.Component {
             </div>
           </header>
           {children}
-          <hr className="mt-8" />
+          <hr className="my-16" />
           {footer}
           <Footer />
         </div>
