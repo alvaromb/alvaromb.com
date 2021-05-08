@@ -51,7 +51,7 @@ const About = () => {
         >
           tcomb
         </a>
-        , and others, but I've also created popular components like{' '}
+        , among others, and I've also created popular components like{' '}
         <a
           href="https://github.com/APSL/react-native-keyboard-aware-scroll-view"
           target="_blank"
@@ -67,7 +67,36 @@ const About = () => {
         >
           react-native-version-number
         </a>
-        .
+        . I've also given{' '}
+        <a
+          href="https://github.com/NSSpain/NSSpain-Summaries/blob/master/2016.md#%EF%B8%8F-talks"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          talks
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://www.packtpub.com/application-development/building-your-application-react-native-video"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          published
+        </a>{' '}
+        <a
+          href="https://www.packtpub.com/application-development/publishing-your-application-react-native-video"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          courses
+        </a>{' '}
+        on React Native development.
+      </p>
+
+      <p>
+        Contribute to the community, create and foster good environments to help
+        people grow, explore how different technologies can have positive impact
+        on businesses and projects is my passion.
       </p>
 
       <ol>

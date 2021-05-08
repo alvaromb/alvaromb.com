@@ -20,7 +20,7 @@ class Layout extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         >
-          <title>{siteTitle}</title>
+          <title>Alvaro Medina Ballester personal site</title>
         </Helmet>
         <div>
           <header className="mb-16 flex flex-row items-center">
@@ -37,7 +37,7 @@ class Layout extends React.Component {
             </div>
           </header>
           {children}
-          <hr className="my-16" />
+          <hr className="mt-16 mb-4" />
           {footer}
           <Footer />
         </div>

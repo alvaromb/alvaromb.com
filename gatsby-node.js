@@ -101,10 +101,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
+    let path = value
+    if (node.frontmatter.category === 'blog') {
+      path = `/blog${value}`
+    } else if (node.frontmatter.category === 'app') {
+      path = `/projects${value}`
+    }
     createNodeField({
       name: `slug`,
       node,
-      value: node.frontmatter.category === 'blog' ? `/blog${value}` : value,
+      value: path,
     })
   }
 }
