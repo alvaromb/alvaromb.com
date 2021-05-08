@@ -1,68 +1,45 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import CenteredH1 from './CenteredH1'
-import CenteredBottomSubtitle from './CenteredBottomSubtitle'
-import { rhythm, scale } from '../utils/typography'
+import Helmet from 'react-helmet'
 
-import backgroundImage from '../assets/Background.jpg'
+import Logo from '../components/logo'
+import ListLink from '../components/listLink'
+import Footer from '../components/footer'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    const { children, siteDescription, siteTitle, footer } = this.props
 
-    if (location.pathname === rootPath) {
-      header = (
-        <div style={{ marginTop: 404 }}>
-          <CenteredH1>{title}</CenteredH1>
-          <CenteredBottomSubtitle>
-            ENGINEERING, MANAGEMENT, PRODUCT & MOBILE
-          </CenteredBottomSubtitle>
-        </div>
-      )
-    } else {
-      header = (
-        <div style={{ marginTop: 404 }}>
-          <h3
-            style={{
-              marginTop: 0,
-              marginBottom: rhythm(-1),
-            }}
-          >
-            <Link
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-              }}
-              to={'/'}
-            >
-              {title}
-            </Link>
-          </h3>
-        </div>
-      )
-    }
     return (
-      <div
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center top',
-          overflow: 'hidden',
-        }}
-      >
-        <div
-          style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            maxWidth: 588,
-            padding: `0 ${rhythm(3 / 4)}`,
-            paddingBottom: 80,
+      <div className="max-w-screen-md my-12 mx-auto py-0 pv-4">
+        <Helmet
+          htmlAttributes={{
+            lang: 'en',
+            title: 'Alvaro Medina Ballester personal site',
           }}
+          meta={[{ name: 'description', content: siteDescription }]}
+          title={siteTitle}
         >
-          {header}
+          <title>Alvaro Medina Ballester personal site</title>
+        </Helmet>
+        <div>
+          <header className="mb-16 flex flex-row items-center">
+            <Link className="no-underline" to={'/'}>
+              <Logo />
+            </Link>
+            <div className="flex-auto">
+              <ul className="list-none float-right">
+                <ListLink to="/about/">About</ListLink>
+                <ListLink to="/projects/">Projects</ListLink>
+                <ListLink to="/blog/">Blog</ListLink>
+                <ListLink to="/notes/">Notes</ListLink>
+              </ul>
+            </div>
+          </header>
           {children}
+          <hr className="mt-16 mb-4" />
+          {footer}
+          <Footer />
         </div>
       </div>
     )

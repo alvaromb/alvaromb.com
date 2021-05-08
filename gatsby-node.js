@@ -1,60 +1,98 @@
-const _ = require('lodash')
-const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                  }
-                }
-              }
+  // Create blog pages
+  const blogPost = await path.resolve('./src/templates/blog-post.js')
+  const postQuery = await graphql(`
+    {
+      allFile(
+        sort: {
+          fields: childrenMarkdownRemark___frontmatter___date
+          order: DESC
+        }
+        filter: { sourceInstanceName: { eq: "blog" } }
+        limit: 20
+      ) {
+        nodes {
+          childMarkdownRemark {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
         }
+      }
+    }
+  `)
 
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
+  if (postQuery.errors) {
+    console.error(postQuery.errors)
+    return postQuery.errors
+  }
+  // Create blog posts pages
+  const posts = postQuery.data.allFile.nodes
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+    createPage({
+      path: post.childMarkdownRemark.fields.slug,
+      component: blogPost,
+      context: {
+        slug: post.childMarkdownRemark.fields.slug,
+        previous,
+        next,
+      },
+    })
+  })
 
-        _.each(posts, (post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node
-          const next = index === 0 ? null : posts[index - 1].node
+  // Create app portfolio pages
+  const appPage = await path.resolve('./src/templates/project-page.js')
+  const appQuery = await graphql(`
+    {
+      allFile(
+        sort: {
+          fields: childrenMarkdownRemark___frontmatter___date
+          order: DESC
+        }
+        filter: {
+          sourceInstanceName: { eq: "apps" }
+          childrenMarkdownRemark: { elemMatch: { id: { nin: "null" } } }
+        }
+        limit: 20
+      ) {
+        nodes {
+          childMarkdownRemark {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
 
-          createPage({
-            path: post.node.fields.slug,
-            component: blogPost,
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
-          })
-        })
-      })
-    )
+  if (appQuery.errors) {
+    console.error(appQuery.errors)
+    return appQuery.errors
+  }
+
+  // Create apps pages
+  appQuery.data.allFile.nodes.forEach((app, index) => {
+    createPage({
+      path: app.childMarkdownRemark.fields.slug,
+      component: appPage,
+      context: {
+        slug: app.childMarkdownRemark.fields.slug,
+      },
+    })
   })
 }
 
@@ -63,10 +101,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
+    let path = value
+    if (node.frontmatter.category === 'blog') {
+      path = `/blog${value}`
+    } else if (node.frontmatter.category === 'app') {
+      path = `/projects${value}`
+    }
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: path,
     })
   }
 }
