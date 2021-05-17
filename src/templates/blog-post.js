@@ -21,12 +21,8 @@ class BlogPostTemplate extends React.Component {
         footer={<ShortBio />}
       >
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            display: 'block',
-          }}
-        >
-          {post.frontmatter.date}
+        <p className="block text-gray-400 font-sans">
+          {post.frontmatter.date} · {post.timeToRead} min read
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
@@ -72,6 +68,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt
+      timeToRead
       html
       frontmatter {
         title

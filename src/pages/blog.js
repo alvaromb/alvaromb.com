@@ -20,7 +20,9 @@ const Blog = (props) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <li key={node.fields.slug} style={{ marginBottom: 30 }}>
-              <small>{node.frontmatter.date}</small>
+              <small>
+                {node.frontmatter.date} · {node.timeToRead} min read
+              </small>
               <h2 style={{ marginTop: 5 }}>
                 <Link to={node.fields.slug}>{title}</Link>
               </h2>
@@ -57,6 +59,7 @@ export const pageQuery = graphql`
             title
           }
           excerpt
+          timeToRead
         }
       }
     }
