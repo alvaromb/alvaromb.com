@@ -6,7 +6,7 @@ category: 'blog'
 ---
 
 To be honest, I've never been an active blogger. However, I really enjoy
-installing, change and redo my website from time to time. I have never been
+installing, changing and redoing my website from time to time. I have never been
 a web developer, so for me it's a challenge to take a peek into how these
 things are done and how the web development evolves.<!-- end -->
 
