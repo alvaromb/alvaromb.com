@@ -8,6 +8,7 @@ const Project = (props) => {
       <Link className="absolute self-center -top-12" to={props.slug}>
         <GatsbyImage
           className="w-28 h-28 mx-4 rounded-full ring-2 ring-primary ring-opacity-30 shadow-lg"
+          imgClassName="rounded-full"
           alt={props.title}
           image={getImage(props.icon)}
         />

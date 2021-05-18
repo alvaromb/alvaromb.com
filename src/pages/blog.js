@@ -9,19 +9,15 @@ const Blog = (props) => {
   return (
     <Layout>
       <h2>Blog</h2>
-      <ul
-        style={{
-          listStyle: 'none',
-          padding: 0,
-          margin: 0,
-        }}
-      >
+      <ul className="list-none">
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
-            <li key={node.fields.slug} style={{ marginBottom: 30 }}>
-              <small>{node.frontmatter.date}</small>
-              <h2 style={{ marginTop: 5 }}>
+            <li key={node.fields.slug} className="ml-0 my-6">
+              <small>
+                {node.frontmatter.date} · {node.timeToRead} min read
+              </small>
+              <h2 className="mt-1">
                 <Link to={node.fields.slug}>{title}</Link>
               </h2>
               <p>{node.excerpt}</p>
@@ -57,6 +53,7 @@ export const pageQuery = graphql`
             title
           }
           excerpt
+          timeToRead
         }
       }
     }
