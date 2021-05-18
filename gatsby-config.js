@@ -43,6 +43,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
+        excerpt_separator: `<!-- end -->`,
         plugins: [
           // Processes images in markdown so they can be used in the production build.
           {
@@ -74,6 +75,7 @@ module.exports = {
     // Provides drop-in support for server rendering data added with React Helmet.
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
+    'gatsby-plugin-catch-links',
     // Plausible analytics
     {
       resolve: 'gatsby-plugin-plausible',

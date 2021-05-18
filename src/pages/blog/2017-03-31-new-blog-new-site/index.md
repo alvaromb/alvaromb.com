@@ -6,9 +6,9 @@ category: 'blog'
 ---
 
 To be honest, I've never been an active blogger. However, I really enjoy
-to install, change and redo my website from time to time. I have never been
+installing, change and redo my website from time to time. I have never been
 a web developer, so for me it's a challenge to take a peek into how these
-things are done and how the web development evolves.
+things are done and how the web development evolves.<!-- end -->
 
 ## New hosting: Surge.sh
 
