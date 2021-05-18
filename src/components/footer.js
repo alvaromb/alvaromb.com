@@ -17,7 +17,7 @@ const Footer = () => {
       <div>
         <ul className="list-none ml-0">
           {data.allFooterYaml.nodes.map((service, i) => (
-            <li key={`link-${i}`} className="mr-4 inline-block">
+            <li key={`link-${i}`} className="ml-0 mr-4 inline-block">
               <a
                 className="text-xl"
                 href={service.link}
