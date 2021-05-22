@@ -1,38 +1,25 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import get from 'lodash.get'
 
 import Layout from '../components/layout'
+import BlogPosts from '../components/blogPosts'
 
 const Tags = (props) => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const posts = get(props, 'data.posts.edges')
   const tag = get(props, 'pageContext.tag')
+  const title = `Tag: tag: ${tag} | ${siteTitle}`
 
   return (
     <Layout
       location={props.location}
-      title={siteTitle}
+      title={title}
       siteDescription={`Tag`}
-      siteTitle={`Tag: tag: ${tag} | ${siteTitle}`}
+      siteTitle={title}
     >
       <h2>Tag: {tag}</h2>
-      <ul className="list-none">
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <li key={node.fields.slug} className="ml-0 my-6">
-              <small>
-                {node.frontmatter.date} · {node.timeToRead} min read
-              </small>
-              <h2 className="mt-1">
-                <Link to={node.fields.slug}>{title}</Link>
-              </h2>
-              <p>{node.excerpt}</p>
-            </li>
-          )
-        })}
-      </ul>
+      <BlogPosts posts={posts} />
     </Layout>
   )
 }
