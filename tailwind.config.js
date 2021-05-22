@@ -10,6 +10,7 @@ module.exports = {
       ...CustomColors,
       gray: colors.coolGray,
       white: colors.white,
+      green: colors.green,
     },
     fontFamily: {
       sans: ['Alegreya Sans', 'sans-serif'],
