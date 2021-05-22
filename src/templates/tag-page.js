@@ -9,7 +9,7 @@ const Tags = (props) => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const posts = get(props, 'data.posts.edges')
   const tag = get(props, 'pageContext.tag')
-  const title = `Tag: tag: ${tag} | ${siteTitle}`
+  const title = `Tag: ${tag} | ${siteTitle}`
 
   return (
     <Layout
