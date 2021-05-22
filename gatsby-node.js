@@ -12,13 +12,9 @@ exports.createPages = async ({ graphql, actions }) => {
       allFile(
         sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
         filter: { sourceInstanceName: { eq: "blog" } }
-        limit: 20
       ) {
         nodes {
           childMarkdownRemark {
-            frontmatter {
-              title
-            }
             fields {
               slug
             }
@@ -58,13 +54,9 @@ exports.createPages = async ({ graphql, actions }) => {
           sourceInstanceName: { eq: "apps" }
           childrenMarkdownRemark: { elemMatch: { id: { nin: "null" } } }
         }
-        limit: 20
       ) {
         nodes {
           childMarkdownRemark {
-            frontmatter {
-              title
-            }
             fields {
               slug
             }
@@ -130,6 +122,43 @@ exports.createPages = async ({ graphql, actions }) => {
       component: tagPage,
       context: {
         tag,
+      },
+    })
+  })
+
+  // Generate notes
+  const notesPage = await path.resolve('./src/templates/note-page.js')
+  const notesQuery = await graphql(`
+    {
+      allFile(filter: { sourceInstanceName: { eq: "notes" } }) {
+        edges {
+          node {
+            childMarkdownRemark {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (notesQuery.errors) {
+    console.error(notesQuery.errors)
+    return notesQuery.errors
+  }
+
+  // Create notes pages
+  notesQuery.data.allFile.edges.forEach(({ node }, index) => {
+    createPage({
+      path: node.childMarkdownRemark.fields.slug,
+      component: notesPage,
+      context: {
+        slug: node.childMarkdownRemark.fields.slug,
       },
     })
   })
