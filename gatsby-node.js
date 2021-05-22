@@ -174,6 +174,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       path = `/blog${value}`
     } else if (node.frontmatter.category === 'app') {
       path = `/projects${value}`
+    } else if (node.frontmatter.category === 'notes') {
+      path = `/notes${value}`
     }
     createNodeField({
       name: `slug`,
