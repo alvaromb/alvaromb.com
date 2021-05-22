@@ -1,13 +1,14 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import get from 'lodash.get'
 
 import Layout from '../components/layout'
+import NoteItem from '../components/noteItem'
 
 const Notes = (props) => {
   const title = 'Book notes | Álvaro Medina Ballester'
   const notes = get(props, 'data.notes.edges')
-  console.log(notes)
+
   return (
     <Layout location={props.location} title={title} siteTitle={title}>
       <h2>Notes</h2>
@@ -18,11 +19,13 @@ const Notes = (props) => {
         </a>{' '}
         and learn from the books I want to dive deep on.
       </p>
-      <ul>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
         {notes.map(({ node }) => (
-          <li>
-            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>.
-          </li>
+          <NoteItem
+            title={node.frontmatter.title}
+            field={node.frontmatter.field}
+            slug={node.fields.slug}
+          />
         ))}
       </ul>
     </Layout>
@@ -47,6 +50,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            field
           }
           fields {
             slug

@@ -4,6 +4,7 @@ date: '2021-05-22T22:53:00.000Z'
 path: '/scaling-teams/'
 category: 'notes'
 bookLink: 'https://www.oreilly.com/library/view/scaling-teams/9781491952269/'
+field: 'Engineering Management'
 ---
 
 Scaling teams.
