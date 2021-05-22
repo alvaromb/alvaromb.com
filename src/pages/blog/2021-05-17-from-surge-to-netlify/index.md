@@ -3,6 +3,15 @@ title: From Surge.sh to Netlify
 date: '2021-05-17T20:14:21.593Z'
 path: '/from-surge-to-netlify/'
 category: 'blog'
+tags:
+  - programming
+  - web
+  - gatsbyjs
+  - static
+  - surge
+  - netlify
+  - macromedia
+  - jasc
 ---
 
 It's 2021 and it's been around 4 years since the last update, but this page has changed a lot in between. This is the third (or maybe fourth) design I implement in my personal site and I've been using Gatsby since the first version, from `0.x` to the current `3.x` and everything in between. <!-- end -->There's also another big change, I moved the hosting from [surge.sh](http://surge.sh) to [Netlify](https://www.netlify.com). I'll try to explain why I made the change and how I feel about both products.

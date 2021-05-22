@@ -1,5 +1,6 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const get = require('lodash.get')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -9,10 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const postQuery = await graphql(`
     {
       allFile(
-        sort: {
-          fields: childrenMarkdownRemark___frontmatter___date
-          order: DESC
-        }
+        sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
         filter: { sourceInstanceName: { eq: "blog" } }
         limit: 20
       ) {
@@ -55,10 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const appQuery = await graphql(`
     {
       allFile(
-        sort: {
-          fields: childrenMarkdownRemark___frontmatter___date
-          order: DESC
-        }
+        sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
         filter: {
           sourceInstanceName: { eq: "apps" }
           childrenMarkdownRemark: { elemMatch: { id: { nin: "null" } } }
@@ -91,6 +86,50 @@ exports.createPages = async ({ graphql, actions }) => {
       component: appPage,
       context: {
         slug: app.childMarkdownRemark.fields.slug,
+      },
+    })
+  })
+
+  // Generate tags pages
+  const tagPage = await path.resolve('./src/templates/tag-page.js')
+  const tagsQuery = await graphql(`
+    {
+      allFile(
+        filter: {
+          sourceInstanceName: { eq: "blog" }
+          childMarkdownRemark: { frontmatter: { tags: {} } }
+        }
+      ) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                tags
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (tagsQuery.errors) {
+    console.error(tagsQuery.errors)
+    return tagsQuery.errors
+  }
+
+  // Create tag pages
+  const tags = new Set()
+  tagsQuery.data.allFile.edges.forEach((post, index) => {
+    const postTags = get(post, 'node.childMarkdownRemark.frontmatter.tags')
+    postTags.forEach((tag) => tags.add(tag))
+  })
+  tags.forEach((tag) => {
+    createPage({
+      path: `/tags/${tag}`,
+      component: tagPage,
+      context: {
+        tag,
       },
     })
   })

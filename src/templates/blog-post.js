@@ -10,8 +10,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const siteDescription = post.excerpt
-    const { previous, next } = this.props.pageContext
-
+    console.log(post.frontmatter.tags)
     return (
       <Layout
         location={this.props.location}
@@ -26,29 +25,15 @@ class BlogPostTemplate extends React.Component {
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+        <small className="mt-6">Tags:</small>
+        <ul className="list-none ml-0">
+          {post.frontmatter.tags.map((tag) => (
+            <li className="inline-block ml-0 mr-3 bg-green-900 p-1 rounded">
+              <Link className="tag-link" activeClassName="tag-link" to={`/tags/${tag}/`}>
+                {tag}
               </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
+            </li>
+          ))}
         </ul>
       </Layout>
     )
@@ -73,6 +58,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
       }
     }
   }

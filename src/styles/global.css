@@ -68,4 +68,7 @@
   .home-intro {
     @apply font-serif text-2xl leading-relaxed my-4 text-text;
   }
+  .tag-link {
+    @apply text-gray-100 font-sans hover:text-gray-100 font-sans;
+  }
 }
