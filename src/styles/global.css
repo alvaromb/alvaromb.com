@@ -28,7 +28,7 @@
   h2,
   h3,
   h4 {
-    @apply mt-6 mb-4 leading-none;
+    @apply mt-8 mb-5;
   }
   h1,
   h2,
@@ -57,10 +57,13 @@
     @apply mt-2 list-disc text-text;
   }
   ol {
-    @apply list-decimal font-serif pl-7 pt-4;
+    @apply list-decimal font-serif text-text;
   }
   li {
-    @apply font-serif my-2 ml-6 text-text text-xl;
+    @apply font-serif my-3 ml-6 text-text text-xl;
+  }
+  blockquote {
+    @apply bg-green-100 italic p-2 my-3 border-l-2 border-green-900;
   }
 }
 
@@ -69,6 +72,12 @@
     @apply font-serif text-2xl leading-relaxed my-4 text-text;
   }
   .tag-link {
-    @apply text-gray-100 font-sans hover:text-gray-100 font-sans;
+    @apply text-gray-100 font-sans hover:text-gray-100;
+  }
+  .note-item-link {
+    @apply no-underline font-sans hover:no-underline;
+  }
+  .anchor {
+    @apply mt-2;
   }
 }

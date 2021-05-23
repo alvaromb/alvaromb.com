@@ -26,6 +26,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/src/pages/notes`,
+        name: 'notes',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/data`,
         name: 'yaml',
       },
@@ -63,6 +70,7 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           // Replaces “dumb” punctuation marks with “smart” punctuation marks using the retext-smartypants plugin.
           'gatsby-remark-smartypants',
+          { resolve: 'gatsby-remark-autolink-headers', options: { className: 'anchor' } },
         ],
       },
     },
