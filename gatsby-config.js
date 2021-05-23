@@ -70,6 +70,7 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           // Replaces “dumb” punctuation marks with “smart” punctuation marks using the retext-smartypants plugin.
           'gatsby-remark-smartypants',
+          { resolve: 'gatsby-remark-autolink-headers', options: { className: 'anchor' } },
         ],
       },
     },

@@ -6,18 +6,20 @@ import Layout from '../components/layout'
 
 class NotePageTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const note = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const siteDescription = post.excerpt
+    const siteDescription = note.excerpt
     return (
       <Layout
         location={this.props.location}
         title={siteTitle}
         siteDescription={siteDescription}
-        siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
+        siteTitle={`${note.frontmatter.title} | ${siteTitle}`}
       >
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <h1>{note.frontmatter.title}</h1>
+        <h3>Table of contents</h3>
+        <div dangerouslySetInnerHTML={{ __html: note.tableOfContents }} />
+        <div dangerouslySetInnerHTML={{ __html: note.html }} />
       </Layout>
     )
   }
@@ -36,6 +38,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      tableOfContents(maxDepth: 2)
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
