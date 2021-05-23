@@ -25,6 +25,7 @@ const Notes = (props) => {
             title={node.frontmatter.title}
             field={node.frontmatter.field}
             slug={node.fields.slug}
+            cover={node.frontmatter.cover}
           />
         ))}
       </ul>
@@ -51,6 +52,11 @@ export const pageQuery = graphql`
           frontmatter {
             title
             field
+            cover {
+              childImageSharp {
+                gatsbyImageData(width: 70, placeholder: BLURRED)
+              }
+            }
           }
           fields {
             slug

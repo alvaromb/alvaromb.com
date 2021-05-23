@@ -5,6 +5,7 @@ path: '/scaling-teams/'
 category: 'notes'
 bookLink: 'https://www.oreilly.com/library/view/scaling-teams/9781491952269/'
 field: 'Engineering Management'
+cover: '../../../assets/notes/scaling-teams.jpg'
 ---
 
 Scaling teams.
