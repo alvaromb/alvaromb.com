@@ -16,7 +16,7 @@ const NoteItem = ({ title, field, slug, cover }) => (
           </span>
         </div>
         <div>
-          <span class="group-hover:text-green-200 text-gray-400 text-sm font-medium mb-4 font-sans">
+          <span class="group-hover:text-green-200 text-gray-500 text-sm font-medium mb-4 font-sans">
             {field}
           </span>
         </div>

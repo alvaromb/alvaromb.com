@@ -10,7 +10,12 @@ const Notes = (props) => {
   const notes = get(props, 'data.notes.edges')
 
   return (
-    <Layout location={props.location} title={title} siteTitle={title}>
+    <Layout
+      location={props.location}
+      title={title}
+      siteTitle={title}
+      siteDescription="A collection of booknotes to help organize knowledge. Mostly about tech, management and start-ups."
+    >
       <h2>Notes</h2>
       <p>
         Here you can find my book notes. I follow a note taking system to{' '}

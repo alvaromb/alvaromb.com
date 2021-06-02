@@ -10,7 +10,7 @@ cover: '../../../assets/notes/scaling-teams.jpg'
 
 # Chapters
 
-## Scaling hiring: growing the team
+## Scaling hiring: Growing the team
 
 - A well-designed hiring process yields great results for the company.
 - Hire to cover gaps, not for _warm bodies_.
@@ -72,3 +72,50 @@ cover: '../../../assets/notes/scaling-teams.jpg'
   - Culture change.
   - Lack of career advancement.
   - Lack of attention to organization.
+
+## People management: Getting started
+
+> Explicit focus on people management is vital to success, especially at fast growing companies.
+
+- Morale, alignment, goals.
+- Help to efficiently pursue a goal.
+- Top goals for EM:
+  - Right people on, wrong people off.
+  - Happiness, productivity through motivation, career, compensation and learning.
+  - Focus on high priority, resolve disputes, decision-making and remove distractions.
+  - Providing all necessary resources.
+
+### From _ad-hoc_ to formal management
+
+- Search for burnout signs to act. Otherwise, face **management debt**.
+- Peter Drucker's _span of control_ means between 7 to 10 ICs for each manager.
+- Teams that need to grow quickly will get most benefit from dedicated people manager.
+- Prepare your team before introducing formal management.
+- Technical prowess `!==` management potential.
+- Communicate and rollout management structure.
+- Beware! **this is not a promotion** and shouldn't be seen as one.
+- Important to introduce bottom-up mechanisms to influence in the roadmap:
+  - Occasional skip-levels.
+  - Roundtable discussions.
+
+### How to evaluate potential managers
+
+- Management potential framework:
+  - Up: alerting, giving up feedback, etc.
+  - Sideways: collaborating with peers.
+  - Down: leading ICs instinctively, teaching and mentoring.
+- Traits: organic leadership, empathy, communication, mentorship, strategic thinking.
+- Negative traits: stress management, conflict avoidance, control, information hoarding.
+
+> Management reward cycle is way longer than IC.
+
+- Foster ongoing management education & set-up some structured learning tips like reading groups, shadowing or mentorship training.
+- Again, management role `!==` promotion.
+
+### Interviewing managers
+
+- Steps:
+  - Pre-screening.
+  - Check references.
+  - Prepare IC to interview managers.
+  - On-board like IC to help know the tech stack.
