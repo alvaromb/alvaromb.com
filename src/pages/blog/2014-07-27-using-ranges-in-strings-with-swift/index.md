@@ -4,9 +4,12 @@ date: '2014-07-27T22:12:03.284Z'
 readNext: '/my-second-post/'
 path: '/using-ranges-in-strings-with-swift/'
 category: 'blog'
+tags:
+  - programming
+  - swift
 ---
 
-Swift is still under development, so there are a lot of things to be done from the Apple team. One of this things is the use of ranges in the `String` type. One would expect to create a substring this way:
+Swift is still under development, so there are a lot of things to be done from the Apple team. One of these things is the use of ranges in the `String` type.<!-- end --> One would expect to create a substring this way:
 
 ```swift
 let substring = string.substringWithRange(2..5)

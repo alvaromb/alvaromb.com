@@ -26,6 +26,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/src/pages/notes`,
+        name: 'notes',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/data`,
         name: 'yaml',
       },
@@ -43,6 +50,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
+        excerpt_separator: `<!-- end -->`,
         plugins: [
           // Processes images in markdown so they can be used in the production build.
           {
@@ -62,6 +70,7 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           // Replaces “dumb” punctuation marks with “smart” punctuation marks using the retext-smartypants plugin.
           'gatsby-remark-smartypants',
+          { resolve: 'gatsby-remark-autolink-headers', options: { className: 'anchor' } },
         ],
       },
     },
@@ -74,6 +83,7 @@ module.exports = {
     // Provides drop-in support for server rendering data added with React Helmet.
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
+    'gatsby-plugin-catch-links',
     // Plausible analytics
     {
       resolve: 'gatsby-plugin-plausible',

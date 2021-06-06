@@ -5,30 +5,36 @@ import get from 'lodash.get'
 import Layout from '../components/layout'
 import BlogPosts from '../components/blogPosts'
 
-const Blog = (props) => {
+const Tags = (props) => {
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
   const posts = get(props, 'data.posts.edges')
+  const tag = get(props, 'pageContext.tag')
+  const title = `Tag: ${tag} | ${siteTitle}`
+
   return (
-    <Layout>
-      <h2>Blog</h2>
+    <Layout
+      location={props.location}
+      title={title}
+      siteDescription={`Tag`}
+      siteTitle={title}
+    >
+      <h2>Tag: {tag}</h2>
       <BlogPosts posts={posts} />
     </Layout>
   )
 }
 
-export default Blog
+export default Tags
 
 export const pageQuery = graphql`
-  query {
+  query PostsByTag($tag: String!) {
     site {
       siteMetadata {
         title
         description
       }
     }
-    posts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: "blog" } } }
-    ) {
+    posts: allMarkdownRemark(filter: { frontmatter: { tags: { in: [$tag] } } }) {
       edges {
         node {
           fields {
@@ -38,8 +44,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
           }
-          excerpt
           timeToRead
+          excerpt
         }
       }
     }

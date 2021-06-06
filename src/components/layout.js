@@ -9,18 +9,19 @@ import Footer from '../components/footer'
 class Layout extends React.Component {
   render() {
     const { children, siteDescription, siteTitle, footer } = this.props
+    const title = siteTitle || 'Alvaro Medina Ballester personal site'
 
     return (
       <div className="max-w-screen-md my-12 mx-auto py-0 pv-4">
         <Helmet
           htmlAttributes={{
             lang: 'en',
-            title: 'Alvaro Medina Ballester personal site',
+            title,
           }}
           meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
+          title={title}
         >
-          <title>Alvaro Medina Ballester personal site</title>
+          <title>{title}</title>
         </Helmet>
         <div>
           <header className="mb-16 flex flex-row items-center">
