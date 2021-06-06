@@ -11,7 +11,10 @@ exports.createPages = async ({ graphql, actions }) => {
     {
       allFile(
         sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
-        filter: { sourceInstanceName: { eq: "blog" } }
+        filter: {
+          sourceInstanceName: { eq: "blog" }
+          childrenMarkdownRemark: { elemMatch: { id: { nin: "null" } } }
+        }
       ) {
         nodes {
           childMarkdownRemark {
@@ -31,15 +34,11 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog posts pages
   const posts = postQuery.data.allFile.nodes
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
     createPage({
       path: post.childMarkdownRemark.fields.slug,
       component: blogPost,
       context: {
         slug: post.childMarkdownRemark.fields.slug,
-        previous,
-        next,
       },
     })
   })
@@ -89,6 +88,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allFile(
         filter: {
           sourceInstanceName: { eq: "blog" }
+          childrenMarkdownRemark: { elemMatch: { id: { nin: "null" } } }
           childMarkdownRemark: { frontmatter: { tags: {} } }
         }
       ) {
