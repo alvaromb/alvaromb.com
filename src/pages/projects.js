@@ -44,7 +44,7 @@ export const pageQuery = graphql`
             title
             icon {
               childImageSharp {
-                gatsbyImageData(width: 224, placeholder: BLURRED)
+                gatsbyImageData(width: 224)
               }
             }
           }
