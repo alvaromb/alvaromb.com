@@ -2,13 +2,12 @@ const colors = require('tailwindcss/colors')
 const CustomColors = require('./src/utils/colors')
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     container: { center: true },
     colors: {
       ...CustomColors,
-      gray: colors.coolGray,
+      gray: colors.gray,
       white: colors.white,
       green: colors.green,
     },
@@ -23,8 +22,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

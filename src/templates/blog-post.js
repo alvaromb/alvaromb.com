@@ -28,7 +28,7 @@ class BlogPostTemplate extends React.Component {
         <small className="mt-6">Tags:</small>
         <ul className="list-none ml-0">
           {post.frontmatter.tags.map((tag) => (
-            <li className="inline-block ml-0 mr-3 bg-green-900 p-1 rounded">
+            <li key={tag} className="inline-block ml-0 mr-3 bg-green-900 p-1 rounded">
               <Link className="tag-link" activeClassName="tag-link" to={`/tags/${tag}/`}>
                 {tag}
               </Link>
@@ -51,7 +51,6 @@ export const pageQuery = graphql`
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
       excerpt
       timeToRead
       html

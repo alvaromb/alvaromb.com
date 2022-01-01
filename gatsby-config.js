@@ -80,7 +80,66 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     // Create an RSS feed (or multiple feeds) for your Gatsby site.
-    'gatsby-plugin-feed',
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map((node) => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ 'content:encoded': node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: "Alvaro Medina Ballester's blog",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: '^/blog/',
+            // optional configuration to specify external rss feed, such as feedburner
+            link: 'https://feeds.feedburner.com/gatsby/blog',
+          },
+        ],
+      },
+    },
     // Provides drop-in support for server rendering data added with React Helmet.
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
