@@ -8,8 +8,6 @@ field: 'Engineering Management'
 cover: '../../../assets/notes/resilient-management.png'
 ---
 
-# Chapters
-
 ## Introduction
 
 - Stages of group development.
