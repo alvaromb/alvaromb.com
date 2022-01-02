@@ -24,10 +24,10 @@ class BlogPostTemplate extends React.Component {
             <span className="text-zinc-400">
               {post.frontmatter.date} · {post.timeToRead} min read
             </span>
-            <h1 className="mb-11">{post.frontmatter.title}</h1>
+            <h1>{post.frontmatter.title}</h1>
           </article>
           <article
-            className="prose prose-zinc lg:prose-xl mx-auto"
+            className="prose prose-zinc lg:prose-xl mx-auto mt-10"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
