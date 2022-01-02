@@ -9,8 +9,10 @@ const Blog = (props) => {
   const posts = get(props, 'data.posts.edges')
   return (
     <Layout>
-      <h2>Blog</h2>
-      <BlogPosts posts={posts} />
+      <article className="prose lg:prose-xl mx-auto">
+        <h2>Blog</h2>
+        <BlogPosts posts={posts} />
+      </article>
     </Layout>
   )
 }

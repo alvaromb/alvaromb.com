@@ -10,18 +10,18 @@ const Bio = () => {
     }
   `)
   return (
-    <>
+    <div className="mt-8">
+      <h1 className="text-4xl text-zinc-800">Álvaro Medina Ballester</h1>
       <p className="home-intro">{data.dataYaml.introduction}</p>
       <p className="home-intro">
-        I have worked for startups and big companies, helping them envision their mobile
-        strategy and leading technical teams. Currently, I serve as General Manager at{' '}
+        Currently, I work as an Engineering Manager at{' '}
         <a
           className="text-link"
-          href="http://www.fundaciobit.org"
+          href="https://www.packlink.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Fundació BIT
+          Packlink
         </a>
         . Learn more{' '}
         <Link className="text-link" to="about/">
@@ -29,7 +29,7 @@ const Bio = () => {
         </Link>
         .
       </p>
-    </>
+    </div>
   )
 }
 

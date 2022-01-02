@@ -19,12 +19,12 @@ class BlogPostTemplate extends React.Component {
         siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
         footer={<ShortBio />}
       >
-        <div className="pt-8">
+        <div>
           <article className="prose lg:prose-xl mx-auto">
-            <h1>{post.frontmatter.title}</h1>
-            <p className="block text-zinc-400 font-sans">
+            <span className="text-zinc-400">
               {post.frontmatter.date} · {post.timeToRead} min read
-            </p>
+            </span>
+            <h1 className="mb-11">{post.frontmatter.title}</h1>
           </article>
           <article
             className="prose prose-zinc lg:prose-xl mx-auto"

@@ -10,16 +10,25 @@ module.exports = {
       emerald: colors.emerald,
       amber: colors.amber,
     },
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              'text-decoration-line': 'none',
+              color: theme('colors.amber.700'),
+              '&:hover': {
+                'text-decoration-line': 'underline !important',
+                'text-decoration-color': `${theme('colors.amber.500')} !important`,
+              },
+            },
+          },
+        },
+      }),
+    },
     fontFamily: {
       sans: ['Alegreya Sans', 'sans-serif'],
-      serif: ['Alegreya', 'sans-serif'],
     },
-    // extend: {
-    //   spacing: {
-    //     128: '32rem',
-    //     144: '36rem',
-    //   },
-    // },
   },
   plugins: [require('@tailwindcss/typography')],
 }

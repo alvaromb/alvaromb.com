@@ -16,24 +16,28 @@ const Notes = (props) => {
       siteTitle={title}
       siteDescription="A collection of booknotes to help organize knowledge. Mostly about tech, management and start-ups."
     >
-      <h2>Notes</h2>
-      <p>
-        Here you can find my book notes. I follow a note taking system to{' '}
-        <a href="https://fs.blog/reading/" target="_blank" rel="noopener noreferrer">
-          read better
-        </a>{' '}
-        and learn from the books I want to dive deep on.
-      </p>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-        {notes.map(({ node }) => (
-          <NoteItem
-            title={node.frontmatter.title}
-            field={node.frontmatter.field}
-            slug={node.fields.slug}
-            cover={node.frontmatter.cover}
-          />
-        ))}
-      </ul>
+      <article className="prose lg:prose-xl">
+        <h2>Notes</h2>
+        <p>
+          Here you can find my book notes. I follow a note taking system to{' '}
+          <a href="https://fs.blog/reading/" target="_blank" rel="noopener noreferrer">
+            read better
+          </a>{' '}
+          and learn from the books I want to dive deep on.
+        </p>
+      </article>
+      <div className="mt-8">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+          {notes.map(({ node }) => (
+            <NoteItem
+              title={node.frontmatter.title}
+              field={node.frontmatter.field}
+              slug={node.fields.slug}
+              cover={node.frontmatter.cover}
+            />
+          ))}
+        </ul>
+      </div>
     </Layout>
   )
 }

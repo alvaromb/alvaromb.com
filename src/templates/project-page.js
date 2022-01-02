@@ -19,9 +19,11 @@ class ProjectTemplate extends React.Component {
         siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
         footer={<ShortBio />}
       >
-        <h1>{post.frontmatter.title}</h1>
+        <article className="prose lg:prose-xl mx-auto">
+          <h1 className="mb-11">{post.frontmatter.title}</h1>
+        </article>
         <article
-          className="prose lg:prose-lg"
+          className="prose lg:prose-xl mx-auto"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </Layout>

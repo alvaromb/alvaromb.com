@@ -22,9 +22,9 @@ class Layout extends React.Component {
           <title>{title}</title>
         </Helmet>
         <Header />
-        <div className="max-w-screen-md mb-12 mx-auto py-0 px-4">
+        <div className="max-w-screen-md mb-12 mx-auto py-8 px-4">
           {children}
-          <hr className="mt-16 mb-4" />
+          <hr className="mt-16 mb-4 border-zinc-200" />
           {footer}
           <Footer />
         </div>

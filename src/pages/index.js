@@ -14,7 +14,6 @@ class Index extends React.Component {
 
     return (
       <Layout title={siteTitle} siteDescription={siteDescription}>
-        <h1>Álvaro Medina Ballester</h1>
         <Bio />
       </Layout>
     )
