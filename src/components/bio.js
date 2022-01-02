@@ -15,10 +15,19 @@ const Bio = () => {
       <p className="home-intro">
         I have worked for startups and big companies, helping them envision their mobile
         strategy and leading technical teams. Currently, I serve as General Manager at{' '}
-        <a href="http://www.fundaciobit.org" target="_blank" rel="noopener noreferrer">
+        <a
+          className="text-link"
+          href="http://www.fundaciobit.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Fundació BIT
         </a>
-        . Learn more <Link to="about/">about me</Link>.
+        . Learn more{' '}
+        <Link className="text-link" to="about/">
+          about me
+        </Link>
+        .
       </p>
     </>
   )

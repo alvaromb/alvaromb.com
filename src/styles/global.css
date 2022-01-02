@@ -4,22 +4,22 @@
 
 @layer base {
   body {
-    @apply bg-zinc-100;
-  }
-  a {
-    @apply text-amber-500 no-underline;
-  }
-  a:hover {
-    @apply text-amber-500 underline;
+    @apply bg-zinc-50;
   }
 }
 
 @layer components {
   .home-intro {
-    @apply font-serif text-2xl leading-relaxed my-4 text-zinc-900;
+    @apply text-2xl leading-relaxed my-4 text-zinc-700;
+  }
+  .text-link {
+    @apply text-amber-700 no-underline;
+  }
+  .text-link:hover {
+    @apply text-amber-700 underline decoration-amber-500;
   }
   .tag-link {
-    @apply text-zinc-100 font-sans hover:text-zinc-100;
+    @apply text-zinc-100 font-sans hover:text-zinc-100 hover:bg-none hover:underline;
   }
   .note-item-link {
     @apply no-underline font-sans hover:no-underline;

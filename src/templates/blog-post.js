@@ -27,7 +27,7 @@ class BlogPostTemplate extends React.Component {
             </p>
           </article>
           <article
-            className="prose lg:prose-xl mx-auto"
+            className="prose prose-zinc lg:prose-xl mx-auto"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>

@@ -3,8 +3,8 @@ import React from 'react'
 const Logo = () => (
   <svg
     className="fill-amber-500"
-    width="64"
-    height="64"
+    width="48"
+    height="48"
     viewBox="0 0 128 128"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

@@ -10,10 +10,7 @@ import Layout from '../components/layout'
 class Index extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
+    const siteDescription = get(this, 'props.data.site.siteMetadata.description')
 
     return (
       <Layout title={siteTitle} siteDescription={siteDescription}>
