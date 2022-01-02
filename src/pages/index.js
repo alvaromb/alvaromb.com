@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import '@fontsource/alegreya'
 import '@fontsource/alegreya-sans'
 import get from 'lodash.get'
 
