@@ -18,8 +18,14 @@ class NotePageTemplate extends React.Component {
       >
         <h1>{note.frontmatter.title}</h1>
         <h3>Table of contents</h3>
-        <div dangerouslySetInnerHTML={{ __html: note.tableOfContents }} />
-        <div dangerouslySetInnerHTML={{ __html: note.html }} />
+        <article
+          className="prose lg:prose-lg"
+          dangerouslySetInnerHTML={{ __html: note.tableOfContents }}
+        />
+        <article
+          className="prose lg:prose-lg"
+          dangerouslySetInnerHTML={{ __html: note.html }}
+        />
       </Layout>
     )
   }

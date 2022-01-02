@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const NoteItem = ({ title, field, slug, cover }) => (
-  <li className="hover:bg-green-900 hover:border-transparent hover:shadow-lg group block rounded-lg p-4 border border-gray-200 bg-white ml-0">
+  <li className="hover:bg-emerald-900 hover:border-transparent hover:shadow-lg group block rounded-lg p-4 border border-zinc-200 bg-white ml-0">
     <Link
       to={slug}
       className="flex flex-row  grid-cols-2 grid-rows-2 items-center note-item-link relative"
@@ -16,7 +16,7 @@ const NoteItem = ({ title, field, slug, cover }) => (
           </span>
         </div>
         <div>
-          <span class="group-hover:text-green-200 text-gray-500 text-sm font-medium mb-4 font-sans">
+          <span class="group-hover:text-emerald-200 text-zinc-500 text-sm font-medium mb-4 font-sans">
             {field}
           </span>
         </div>

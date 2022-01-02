@@ -13,9 +13,9 @@ const Project = (props) => {
           image={getImage(props.icon)}
         />
       </Link>
-      <div className="px-12 pb-12 pt-20 flex-1 justify-end font-sans text-md text-gray-500">
+      <div className="px-12 pb-12 pt-20 flex-1 justify-end font-sans text-md text-zinc-500">
         <h3 className="font-medium">{props.title}</h3>
-        <p className="font-sans text-base my-6 text-gray-600">{props.desc}</p>
+        <p className="font-sans text-base my-6 text-zinc-600">{props.desc}</p>
         <Link className="uppercase tracking-widest text-sm" to={props.slug}>
           Learn more
         </Link>
