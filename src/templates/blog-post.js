@@ -9,13 +9,13 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const siteDescription = post.excerpt
+    const excerpt = post.excerpt
 
     return (
       <Layout
         location={this.props.location}
         title={siteTitle}
-        siteDescription={siteDescription}
+        siteDescription={excerpt}
         siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
         footer={<ShortBio />}
       >

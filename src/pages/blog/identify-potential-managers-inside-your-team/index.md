@@ -8,7 +8,7 @@ tags:
   - engineering management
 ---
 
-I'm in the process of publishing all my book [notes](/notes/) into this website in order to review, collect and share my knowledge database. I can't recommend this strategy enough, because it makes easier to retain knowledge and you can refresh interesting stuff that came up when you were reading and taking hand-written notes[^1]. While reviewing the notes of [Scaling Teams](/notes/scaling-teams/)[^2] I stumbled upon a very interesting concept I highlighted in one of the people management chapters.<!-- end --> Let's get into it.
+I'm in the process of publishing all my book [notes](/notes/) into this website in order to review, collect and share my knowledge database. I can't recommend this strategy enough, because it makes easier to retain knowledge and you can refresh interesting stuff that came up when you were reading and taking hand-written notes[^1]. While reviewing the notes of [Scaling Teams](/notes/scaling-teams/)[^2], I stumbled upon a very interesting concept I highlighted in one of the people management chapters.<!-- end --> Let's get into it.
 
 ## Management shouldn't be a promotion
 
