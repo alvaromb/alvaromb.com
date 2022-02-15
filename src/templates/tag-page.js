@@ -12,12 +12,7 @@ const Tags = (props) => {
   const title = `Tag: ${tag} | ${siteTitle}`
 
   return (
-    <Layout
-      location={props.location}
-      title={title}
-      siteDescription={`Tag`}
-      siteTitle={title}
-    >
+    <Layout location={props.location} siteDescription={`Tag`} siteTitle={title}>
       <h2>Tag: {tag}</h2>
       <BlogPosts posts={posts} />
     </Layout>

@@ -12,7 +12,6 @@ class NotePageTemplate extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={siteTitle}
         siteDescription={siteDescription}
         siteTitle={`${note.frontmatter.title} | ${siteTitle}`}
       >

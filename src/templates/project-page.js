@@ -14,7 +14,6 @@ class ProjectTemplate extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={siteTitle}
         siteDescription={siteDescription}
         siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
         footer={<ShortBio />}

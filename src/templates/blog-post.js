@@ -14,7 +14,6 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={siteTitle}
         siteDescription={excerpt}
         siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
         footer={<ShortBio />}
