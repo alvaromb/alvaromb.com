@@ -1,5 +1,5 @@
 ---
-title: 'The Manager's path'
+title: "The Manager's path"
 date: '2022-02-23T22:00:00.000Z'
 path: '/the-managers-path/'
 category: 'notes'
