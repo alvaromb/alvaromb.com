@@ -221,7 +221,7 @@ cover: '../../../assets/notes/scaling-teams.jpg'
   - How to improve: measure average cycle time.
   - **Use VSM in retrospectives**.
   - Search for heavy coordination time in retros.
-  - Check VSM: [bit.ly/2gVZ8xd](bit.ly/2gVZ8xd)
+  - Check VSM: [bit.ly/2gVZ8xd](https://bit.ly/2gVZ8xd)
 
 ## 8. Scaling the organization: reporting structure
 
