@@ -117,3 +117,122 @@ cover: '../../../assets/notes/scaling-teams.jpg'
   - Check references.
   - Prepare IC to interview managers.
   - On-board like IC to help know the tech stack.
+
+## 5. People management at scale
+
+- Management at scale comes with different problems.
+- Improve managers with:
+  - Providing a mentor.
+  - Establish a learning program (book club also works).
+  - Assign someone for management quality.
+- Tribal identities can occur. **Invest in manager to manager relationship**.
+- Look for opportunities for manager collaboration. EM forum collaboration for instance.
+- Measuring manager performance is really important.
+  - Define expectations.
+  - Gather data about the team to measure performance.
+  - Skip-level and other meetings to gather frequent feedback.
+  - Competition isn't feedback.
+  - Seek for performance, not likeability.
+- Underperformance
+  - Handle with care, planning and adjusting when letting go a manager.
+
+### Morale under rapid growth
+
+- Prepare the team to face growth. Explain opportunities and tackle skepticism and potential issues (loss of autonomy, fewer opportunities with newer hires, etc.).
+
+  > With growth can come a sense of having less impact and ownership.
+  >
+  > - Build empowerment from the bottom.
+  > - Focus failures on learning, not punishment.
+  > - Avoid formal processes that stop innovation.
+  > - Reward getting things done.
+  > - Let ICs work on what's interesting for them.
+  > - "Team shopping" can be positive.
+
+### Work-life balance
+
+- Realistic, not arbitrary deadlines.
+- Leaders should be good examples.
+- Heroes are unhealthy for the teams.
+
+### Diversity
+
+- Participating in diversity hiring or activities can be a burden for underrepresented people.
+- Beware of environment and _null process_ (absence of formal process).
+- Promote work-life balance and use metrics to surface bias.
+
+### Continuous learning
+
+- Ongoing education is key for good engagement and performance.
+- Learning budget, conferences, meetups, etc.
+- Mentoring is very effective for young leaders.
+- Retrospectives, post-mortems and cross training are good strategies for team learning.
+
+### Career development
+
+- Career path is critical when introducing formal management.
+- Consider separate tracks for IC/Management.
+- Levels can be tricky when they're introduced. Slotting and promotion.
+- A promotion process is key for growth.
+
+## 6. Scaling the organization: design principles
+
+> _The purpose of organization is to reduce the amount of communication and coordination necessary_
+> -- Mythical Man-Month
+
+- Avoid diseconomies of scale (hiring reduces output).
+- Intrinsic and extrinsic motivation:
+  - Autonomy
+  - Mastery
+  - Purpose
+- Organizing by skill-set is common in early stage.
+- **Value Streams** are affected after growing.
+- Goals while growing: move fast and connect employees to the product.
+- Principles:
+  - Agile mindset.
+  - Delivery teams (also, _domains_).
+  - Autonomy.
+  - Purpose and measure success.
+  - Continuous value delivery.
+  - Continuous learning culture.
+
+### Delivery teams
+
+- Can deliver 95% of backlog independently.
+- Cross knowledge, has all the necessary skill-set inside the team.
+- Embrace autonomy: motivation comes when they clearly understand the effect on customers. They have a good picture on whatever needs to be done.
+- Measure success & establish purpose: KPI team goals are fundamental. Go from company KPI to team KPI.
+
+## 7. Scaling the organization: delivery teams
+
+- Can be build around: platform, features, company or customer.
+  - **Platform**: it's the easiest and works great on small companies. Does not scale well.
+  - **Features**: scales very well. Can be difficult to handle growing amount of features without growing the team.
+  - **Company goals**: keeps clear how to contribute. Can be difficult to scale.
+  - **Customer**: develop for customer groups without dependencies. Clear alignment with customer needs. Hard to scale.
+
+### Value stream mapping
+
+- Can help improve existing suboptimal setups.
+- Good example of VSM from Phil Calçado p. 147.
+- From one team to two:
+  - Beware of shared members when splitting teams (bus factor).
+  - Sync between teams are good ways to avoid siloing.
+  - How to improve: measure average cycle time.
+  - **Use VSM in retrospectives**.
+  - Search for heavy coordination time in retros.
+  - Check VSM: [bit.ly/2gVZ8xd](bit.ly/2gVZ8xd)
+
+## 8. Scaling the organization: reporting structure
+
+- Question: which engineers should report to which managers?
+- Question: how many reports per manager? Drucker's _span of management responsibilities_, between 7 to 10.
+- 4 ways to organize:
+  - One EM per delivery team.
+  - One EM per entire delivery team (including design & PM).
+  - One EM per specialization (tech).
+  - General people management.
+- Combining multiple approaches is what makes sense.
+- Next level: additional level of management (Director of Engineering).
+- Infra/platform teams are needed to treat inside team as user/customer.
+- Transition phase: combination stage is normal when adding platforms (Android, iOS, mobile, etc.). Can integrate later.
