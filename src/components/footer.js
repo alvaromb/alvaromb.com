@@ -19,7 +19,7 @@ const Footer = () => {
           {data.allFooterYaml.nodes.map((service, i) => (
             <li key={`link-${i}`} className="ml-0 mr-4 inline-block">
               <a
-                className="text-xl"
+                className="text-xl text-link"
                 href={service.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -31,7 +31,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="mt-4">
-        <span>&copy; 2021 Álvaro.</span>
+        <span className="text-zinc-400">&copy; 2020 - present.</span>
       </div>
     </div>
   )

@@ -8,9 +8,7 @@ field: 'Engineering Management'
 cover: '../../../assets/notes/scaling-teams.jpg'
 ---
 
-# Chapters
-
-## Scaling hiring: Growing the team
+## 1. Scaling hiring: Growing the team
 
 - A well-designed hiring process yields great results for the company.
 - Hire to cover gaps, not for _warm bodies_.
@@ -27,7 +25,7 @@ cover: '../../../assets/notes/scaling-teams.jpg'
 1. How to reach the perfect balance for strict and easy hiring process?
 2. How to know when we need to hire and when is not necessary? Re. _warm bodies_.
 
-## Scaling hiring: Interviews & hiring decisions
+## 2. Scaling hiring: Interviews & hiring decisions
 
 - Screening process can filter candidates.
 - **4 steps/interviews per hiring is enough for the process accuracy.**
@@ -50,7 +48,7 @@ cover: '../../../assets/notes/scaling-teams.jpg'
 - Balance diversity addressing bias.
 - Beware of the interview panel. Choose wisely how and who participates.
 
-## Scaling hiring: Close, onboard & beyond
+## 3. Scaling hiring: Close, onboard & beyond
 
 - Steps:
   - Offer.
@@ -73,7 +71,7 @@ cover: '../../../assets/notes/scaling-teams.jpg'
   - Lack of career advancement.
   - Lack of attention to organization.
 
-## People management: Getting started
+## 4. People management: Getting started
 
 > Explicit focus on people management is vital to success, especially at fast growing companies.
 

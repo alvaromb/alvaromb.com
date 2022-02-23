@@ -12,14 +12,21 @@ class NotePageTemplate extends React.Component {
     return (
       <Layout
         location={this.props.location}
-        title={siteTitle}
         siteDescription={siteDescription}
         siteTitle={`${note.frontmatter.title} | ${siteTitle}`}
       >
-        <h1>{note.frontmatter.title}</h1>
-        <h3>Table of contents</h3>
-        <div dangerouslySetInnerHTML={{ __html: note.tableOfContents }} />
-        <div dangerouslySetInnerHTML={{ __html: note.html }} />
+        <article className="prose lg:prose-lg">
+          <h1>{note.frontmatter.title}</h1>
+          <h3>Table of contents</h3>
+        </article>
+        <article
+          className="prose lg:prose-lg"
+          dangerouslySetInnerHTML={{ __html: note.tableOfContents }}
+        />
+        <article
+          className="prose lg:prose-lg mt-11"
+          dangerouslySetInnerHTML={{ __html: note.html }}
+        />
       </Layout>
     )
   }
@@ -36,7 +43,6 @@ export const pageQuery = graphql`
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
       html
       tableOfContents(maxDepth: 2)
       frontmatter {

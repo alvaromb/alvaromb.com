@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
-import Logo from '../components/logo'
-import ListLink from '../components/listLink'
-import Footer from '../components/footer'
+import Header from './header'
+import Footer from './footer'
 
 class Layout extends React.Component {
   render() {
@@ -12,7 +10,7 @@ class Layout extends React.Component {
     const title = siteTitle || 'Alvaro Medina Ballester personal site'
 
     return (
-      <div className="max-w-screen-md my-12 mx-auto py-0 pv-4">
+      <div>
         <Helmet
           htmlAttributes={{
             lang: 'en',
@@ -23,22 +21,10 @@ class Layout extends React.Component {
         >
           <title>{title}</title>
         </Helmet>
-        <div>
-          <header className="mb-16 flex flex-row items-center">
-            <Link className="no-underline" to={'/'}>
-              <Logo />
-            </Link>
-            <div className="flex-auto">
-              <ul className="list-none float-right">
-                <ListLink to="/about/">About</ListLink>
-                <ListLink to="/projects/">Projects</ListLink>
-                <ListLink to="/blog/">Blog</ListLink>
-                <ListLink to="/notes/">Notes</ListLink>
-              </ul>
-            </div>
-          </header>
+        <Header />
+        <div className="max-w-screen-md mb-12 mx-auto py-8 px-4">
           {children}
-          <hr className="mt-16 mb-4" />
+          <hr className="mt-16 mb-4 border-zinc-200" />
           {footer}
           <Footer />
         </div>
