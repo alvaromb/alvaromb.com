@@ -11,8 +11,6 @@ tags:
   - unav
 ---
 
-# ¿Vale la pena el PDD del IESE?
-
 Mucha gente se plantea añadir a su formación universitaria algún tipo de conocimiento sobre negocio, empresa o gestión. Ya sea por ganas de emprender, crecer dentro de una organización en cuanto a responsabilidades o simplemente entender mejor cómo aportar a una organización desde otro punto de vista. El PDD (Programa de desarrollo directivo) del IESE Business School suele ser una de las opciones que aparecen encima de la mesa cuando buscamos cómo mejorar en estos aspectos. Debido a su alto coste, surge la pregunta, ¿vale la pena realmente el PDD del IESE?. Os cuento mi caso personal y mi visión en este artículo.
 
 ## ¿Qué es el PDD?
