@@ -19,15 +19,18 @@ const About = () => {
           years, mainly on mobile apps for both start-ups and big companies. I started
           developing iPhone apps for iOS 5 and I've been experimenting with different
           technologies in the mobile realm, from native environments to hybrid solutions.
+          Currently, I work as an Engineering Manager at Packlink (part of Auctane),
+          driving the subscription team, responsible for building the SaaS model of the
+          PRO product.
         </p>
 
         <p>
-          In 2017 I was in charge of the mobile development team at APSL, managing
-          customers, onboarding people and leading the tech for mobile apps. My experience
-          managing engineers and projects drove my interest to switch from individual
-          contributor to team lead. Since 2019 I'm the general manager of a public company
-          called Fundació BIT, which executes software for the public sector, from
-          hospitals to e-admin.
+          Prior to that, in 2017 I was in charge of the mobile development team at APSL,
+          managing customers, onboarding people and leading the tech for mobile apps. My
+          experience managing engineers and projects drove my interest to switch from
+          individual contributor to team lead. On 2019, I fully switched into management,
+          taking the role of general manager of a government company called Fundació BIT,
+          which executes software for the public sector, from hospitals to e-admin.
         </p>
 
         <p>
