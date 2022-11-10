@@ -18,15 +18,15 @@ class BlogPostTemplate extends React.Component {
         siteTitle={`${post.frontmatter.title} | ${siteTitle}`}
         footer={<ShortBio />}
       >
-        <div>
-          <article className="prose lg:prose-xl mx-auto">
+        <div className="mx-5 lg:mx-auto">
+          <article className="prose lg:prose-xl">
             <span className="text-zinc-400">
               {post.frontmatter.date} · {post.timeToRead} min read
             </span>
             <h1>{post.frontmatter.title}</h1>
           </article>
           <article
-            className="prose prose-zinc lg:prose-xl mx-auto mt-10"
+            className="prose prose-zinc prose-xl mt-10"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
