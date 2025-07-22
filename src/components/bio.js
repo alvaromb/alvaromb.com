@@ -17,13 +17,13 @@ const Bio = () => {
         Currently, I work as an Engineering Manager at{' '}
         <a
           className="text-link"
-          href="https://www.packlink.com"
+          href="https://www.auctane.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Packlink
+          Auctane
         </a>
-        . Learn more{' '}
+        in the Packlink product. Learn more{' '}
         <Link className="text-link" to="about/">
           about me
         </Link>
