@@ -14,13 +14,12 @@ const About = () => {
           and a manager
           <a href="#fn-pdd">
             <sup>2</sup>
-          </a>{' '}
-          living in Palma, Spain. I've been working on digital products for the past 10
+          </a>. I've been working on digital products for the past 10
           years, mainly on mobile apps for both start-ups and big companies. I started
           developing iPhone apps for iOS 5 and I've been experimenting with different
           technologies in the mobile realm, from native environments to hybrid solutions.
           Currently, I work as an Engineering Manager at Packlink (part of Auctane),
-          driving the subscription team, responsible for building the SaaS model of the
+          driving cross functional teams. I've been responsible for building the SaaS model of the
           PRO product.
         </p>
 
