@@ -22,7 +22,7 @@ const Bio = () => {
           rel="noopener noreferrer"
         >
           Auctane
-        </a>
+        </a>{' '}
         in the Packlink product. Learn more{' '}
         <Link className="text-link" to="about/">
           about me

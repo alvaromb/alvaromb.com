@@ -14,13 +14,13 @@ const About = () => {
           and a manager
           <a href="#fn-pdd">
             <sup>2</sup>
-          </a>. I've been working on digital products for the past 10
-          years, mainly on mobile apps for both start-ups and big companies. I started
-          developing iPhone apps for iOS 5 and I've been experimenting with different
-          technologies in the mobile realm, from native environments to hybrid solutions.
-          Currently, I work as an Engineering Manager at Packlink (part of Auctane),
-          driving cross functional teams. I've been responsible for building the SaaS model of the
-          PRO product.
+          </a>
+          . I've been working on digital products for the past 10 years, mainly on mobile
+          apps for both start-ups and big companies. I started developing iPhone apps for
+          iOS 5 and I've been experimenting with different technologies in the mobile
+          realm, from native environments to hybrid solutions. Currently, I work as an
+          Engineering Manager at Packlink (part of Auctane), driving cross functional
+          teams. I've been responsible for building the SaaS model of the PRO product.
         </p>
 
         <p>
@@ -29,15 +29,15 @@ const About = () => {
           experience managing engineers and projects drove my interest to switch from
           individual contributor to team lead. On 2019, I fully switched into management,
           taking the role of general manager of a government company called Fundació BIT,
-          which executes software for the public sector, from hospitals to e-admin.
+          which executes software for the public sector, from hospitals to e-admin. Before
+          2017 I had the luck of being in charge of the mobile team of an start-up
+          incubator named Mola.com, which gave me a lot of insight and experience about
+          building and scaling digital products with a lean approach.
         </p>
 
         <p>
-          Before 2017 I had the luck of being in charge of the mobile team of an start-up
-          incubator named Mola.com, which gave me a lot of insight and experience about
-          building and scaling digital products with a lean approach. During my career as
-          individual contributor and manager I've been able to contribute to several open
-          source projects like Facebook's{' '}
+          During my career as individual contributor and manager I've been able to
+          contribute to several open source projects like Facebook's{' '}
           <a
             href="https://github.com/facebook/react-native/pulls?q=is%3Apr+author%3Aalvaromb+is%3Aclosed"
             target="_blank"

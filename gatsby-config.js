@@ -115,25 +115,21 @@ module.exports = {
                 })
               })
             },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  nodes {
-                    excerpt
-                    html
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      date
-                    }
-                  }
-                }
-              }
-            `,
+            query: `{
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      excerpt
+      html
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        date
+      }
+    }
+  }
+}`,
             output: '/rss.xml',
             title: "Alvaro Medina Ballester's blog",
             // optional configuration to insert feed reference in pages:
@@ -147,8 +143,6 @@ module.exports = {
         ],
       },
     },
-    // Provides drop-in support for server rendering data added with React Helmet.
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
     'gatsby-plugin-catch-links',
     // Plausible analytics

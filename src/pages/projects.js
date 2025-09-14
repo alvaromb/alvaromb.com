@@ -30,29 +30,27 @@ const Projects = (props) => {
 
 export default Projects
 
-export const pageQuery = graphql`
-  query {
-    apps: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: "app" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            icon {
-              childImageSharp {
-                gatsbyImageData(width: 224)
-              }
+export const pageQuery = graphql`{
+  apps: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {category: {eq: "app"}}}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          icon {
+            childImageSharp {
+              gatsbyImageData(width: 224)
             }
           }
-          excerpt(pruneLength: 220)
         }
+        excerpt(pruneLength: 220)
       }
     }
   }
-`
+}`

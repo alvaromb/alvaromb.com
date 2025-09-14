@@ -44,34 +44,32 @@ const Notes = (props) => {
 
 export default Notes
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
+      description
     }
-    notes: allMarkdownRemark(
-      sort: { fields: frontmatter___title, order: DESC }
-      filter: { frontmatter: { category: { eq: "notes" } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            field
-            cover {
-              childImageSharp {
-                gatsbyImageData(width: 70, placeholder: BLURRED)
-              }
+  }
+  notes: allMarkdownRemark(
+    sort: {frontmatter: {title: DESC}}
+    filter: {frontmatter: {category: {eq: "notes"}}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          field
+          cover {
+            childImageSharp {
+              gatsbyImageData(width: 70, placeholder: BLURRED)
             }
           }
-          fields {
-            slug
-          }
+        }
+        fields {
+          slug
         }
       }
     }
   }
-`
+}`

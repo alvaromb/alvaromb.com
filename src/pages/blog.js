@@ -19,31 +19,29 @@ const Blog = (props) => {
 
 export default Blog
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
+export const pageQuery = graphql`{
+  site {
+    siteMetadata {
+      title
+      description
     }
-    posts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: "blog" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-          excerpt
-          timeToRead
+  }
+  posts: allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {category: {eq: "blog"}}}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
         }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+        }
+        excerpt
+        timeToRead
       }
     }
   }
-`
+}`

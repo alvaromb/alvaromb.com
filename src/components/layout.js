@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 
 import Header from './header'
 import Footer from './footer'
@@ -11,16 +10,6 @@ class Layout extends React.Component {
 
     return (
       <div>
-        <Helmet
-          htmlAttributes={{
-            lang: 'en',
-            title,
-          }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={title}
-        >
-          <title>{title}</title>
-        </Helmet>
         <Header />
         <div className="max-w-screen-md mb-12 mx-auto py-8 px-4">
           {children}

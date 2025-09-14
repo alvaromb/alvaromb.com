@@ -7,25 +7,20 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blog pages
   const blogPost = await path.resolve('./src/templates/blog-post.js')
-  const postQuery = await graphql(`
-    {
-      allFile(
-        sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
-        filter: {
-          sourceInstanceName: { eq: "blog" }
-          childrenMarkdownRemark: { elemMatch: { id: { nin: "null" } } }
-        }
-      ) {
-        nodes {
-          childMarkdownRemark {
-            fields {
-              slug
-            }
-          }
+  const postQuery = await graphql(`{
+  allFile(
+    sort: {childrenMarkdownRemark: {frontmatter: {date: DESC}}}
+    filter: {sourceInstanceName: {eq: "blog"}, childrenMarkdownRemark: {elemMatch: {id: {nin: "null"}}}}
+  ) {
+    nodes {
+      childMarkdownRemark {
+        fields {
+          slug
         }
       }
     }
-  `)
+  }
+}`)
 
   if (postQuery.errors) {
     console.error(postQuery.errors)
@@ -45,25 +40,20 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create app portfolio pages
   const appPage = await path.resolve('./src/templates/project-page.js')
-  const appQuery = await graphql(`
-    {
-      allFile(
-        sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
-        filter: {
-          sourceInstanceName: { eq: "apps" }
-          childrenMarkdownRemark: { elemMatch: { id: { nin: "null" } } }
-        }
-      ) {
-        nodes {
-          childMarkdownRemark {
-            fields {
-              slug
-            }
-          }
+  const appQuery = await graphql(`{
+  allFile(
+    sort: {childrenMarkdownRemark: {frontmatter: {date: DESC}}}
+    filter: {sourceInstanceName: {eq: "apps"}, childrenMarkdownRemark: {elemMatch: {id: {nin: "null"}}}}
+  ) {
+    nodes {
+      childMarkdownRemark {
+        fields {
+          slug
         }
       }
     }
-  `)
+  }
+}`)
 
   if (appQuery.errors) {
     console.error(appQuery.errors)

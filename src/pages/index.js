@@ -21,6 +21,22 @@ class Index extends React.Component {
 
 export default Index
 
+export function Head() {
+  const { siteDescription, siteTitle } = this.props
+  const title = siteTitle || 'Alvaro Medina Ballester personal site'
+  return (
+    <>
+      <htmlAttributes lang="en" title={title} />
+      <meta
+        charSet="utf-8"
+        name="Alvaro Medina Ballester site"
+        content={siteDescription}
+      />
+      <title>{title}</title>
+    </>
+  )
+}
+
 export const pageQuery = graphql`
   query {
     site {
